@@ -65,3 +65,9 @@ test('plain-language report uses actual values and never fills missing or obstru
  if(a.measurements.status==='ready'){const m=a.measurements.value[0];m.value={status:'unavailable',reason:{code:'obstructed',message:'Hidden by hair'}};assert.equal(readableMeasurement(m).text,'Hidden by hair');assert.doesNotMatch(reportTakeaways(a).join(' '),/2.67/);}
  assert.match(reportTakeaways({...a,measurements:{status:'empty'}}).join(' '),/visibility review/);
 });
+
+test('unselected reference group cannot auto-add mixed favourites to a report',()=>{
+ const a=fixture();assert.deepEqual(defaultReportStyles(a,['straight-bob','textured-crop'],HAIRSTYLES),[]);
+ a.styling={preferences:{presentation:'unset',texture:'any',currentLength:'any',desiredLength:'any',stylingTime:'any',preferredStyles:[],facialHair:'unknown',allowGrowOut:false,useGeometry:false},recommendations:[],catalogVersion:'4.1.0',imageCredits:[]};
+ assert.deepEqual(defaultReportStyles(a,['straight-bob','textured-crop'],HAIRSTYLES),[]);
+});

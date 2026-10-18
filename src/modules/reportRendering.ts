@@ -4,6 +4,7 @@ import {rankStyles} from './recommendations.ts';
 /** Auto-selection honors current preferences. Out-of-preference favourites require explicit selection. */
 export function defaultReportStyles(analysis:FaceAnalysis,favourites:string[],catalog:CatalogStyle[]):string[]{
  const preferences=analysis.styling?.preferences;
+ if(!preferences?.presentation||preferences.presentation==='unset')return [];
  const allowed=new Set((preferences?rankStyles(catalog,preferences,analysis).map(r=>r.style):catalog).map(s=>s.id));
  const saved=[...new Set(favourites)].filter(id=>allowed.has(id)).slice(0,5);
  const recommended=analysis.styling?.recommendations.flatMap(r=>r.content.status==='ready'&&r.content.value.hairstyleId&&allowed.has(r.content.value.hairstyleId)?[r.content.value.hairstyleId]:[])??[];

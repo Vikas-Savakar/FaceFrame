@@ -1,6 +1,23 @@
 # FaceFrame build status
 
-## Current delivery: style preferences and readable reports — 1.1.0 (2026-10-18)
+## Current delivery: explicit reference choice — 1.1.1 (2026-10-18)
+
+Repeated mixed-gallery feedback revealed that 1.1.0 still started with All styles and that choosing an already-selected group did not exit explicit mixed browsing. This follow-up addresses those actual paths without inferring gender from a photo.
+
+- Default/reset presentation is now `unset`, distinct from explicitly choosing All styles. No automatic recommendations, gallery images or default report favourites appear until a visitor chooses a group. Prominent Men’s / masculine, Women’s / feminine and All styles buttons sit above the preferences. This choice remains session-only.
+- The men’s reference group contains exactly five curated examples: Textured crop, Classic side part, Quiff, Wavy taper and Curly taper. Earlier overlapping group tags were removed. The remaining 19 references are available in the women’s group and explicit mixed browsing. This is editorial reference grouping, not identity classification or a restriction on wearers. Coiled-texture and medium/long men’s reference coverage is missing and disclosed; no other image is substituted. All 24 images, original licenses and preview hashes remain unchanged. Catalog version 4.1.0; matching 4.2.0.
+- Gallery mode is labelled beside its count. Mixed browsing has an explicit name and warning. Any group-button press exits mixed mode, resets filters and clears comparison cards, even when that group was already selected. Fresh/legacy unset preferences cannot auto-select report favourites. Geometry, model, photo exclusion and report layout remain unchanged.
+
+### Verification actually performed for 1.1.1
+
+- **36/36 tests**, strict TypeScript, production build, 7 pinned model/runtime checks and 24 original plus 24 preview asset/rights checks passed. New regressions cover unset/missing choices, reset defaults, empty recommendation/credit snapshots, no mixed report favourites and unavailable men’s coiled coverage. Existing preference tests now explicitly choose All styles when testing unrestricted matching; assertions were retained.
+- Actual production browser check in Windows embedded Chromium: fresh Hairstyles had 0 reference images and 0 suggestions. Choosing Men’s produced exactly the five named cards/suggestions; all five correct WebP images decoded at 768 pixels. Explicit mixed browsing showed 24 cards. Adding a Straight bob comparison then pressing the already-selected Men’s button initially reproduced the stale mixed-mode bug; after the fix it returned to 5 men’s cards and 0 comparison cards. Reset preferences returned to 0 images.
+- Full actual upload route with the permission-cleared NASA fixture produced one face and 478 landmarks. Hairstyles still showed 0 images until choice. Men’s then showed only its five references, and the final report defaulted to Textured crop, Classic side part and Quiff with 0 photo canvases. Local/session storage were empty. No visitor image, landmark data, attached screenshot or report was committed.
+- Physical-device, standalone Chrome automation and other-browser limitations from the earlier QA remain. This check used embedded Chromium, not the user’s Chrome tab. An existing Chrome tab must reload the new production bundle (Ctrl+Shift+R), then upload again and select the group. No new print-engine/device certification or live deployment is claimed.
+
+## Historical 1.1.0 checkpoint
+
+## Delivery: style preferences and readable reports — 1.1.0 (2026-10-18)
 
 User feedback identified mixed references presented without a style-presentation choice and a report that was too technical/repetitive. This update preserves the analyzer, model assets, geometry/shape algorithms, original image assets, privacy model and visual identity.
 

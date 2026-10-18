@@ -102,7 +102,7 @@ export type HairTexture = 'straight' | 'wavy' | 'curly' | 'coiled';
 export type HairLength = 'short' | 'medium' | 'long';
 export type StylePresentation = 'masculine' | 'feminine';
 export interface StylingPreferences {
-  presentation?: StylePresentation | 'any';
+  presentation?: StylePresentation | 'any' | 'unset';
   texture: HairTexture | 'any'; currentLength: HairLength | 'any'; desiredLength: HairLength | 'any';
   stylingTime: 'any' | '5' | '15' | '30'; preferredStyles: string[];
   facialHair: 'unknown' | 'yes' | 'no'; allowGrowOut: boolean; useGeometry: boolean;

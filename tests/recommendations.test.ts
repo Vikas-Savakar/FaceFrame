@@ -5,7 +5,7 @@ import {HAIRSTYLES} from '../src/modules/hairstyleCatalog.ts';
 import {DEFAULT_PREFERENCES,geometryContext,rankStyles,recommendStyles,withStyling} from '../src/modules/recommendations.ts';
 import {CARE_REVIEW_DATE,CARE_SOURCES} from '../src/modules/careContent.ts';
 import type {FaceAnalysis,StylingPreferences} from '../src/contracts.ts';
-const prefs=(patch:Partial<StylingPreferences>={}):StylingPreferences=>({...DEFAULT_PREFERENCES,preferredStyles:[],...patch});
+const prefs=(patch:Partial<StylingPreferences>={}):StylingPreferences=>({...DEFAULT_PREFERENCES,presentation:'any',preferredStyles:[],...patch});
 function analysis(h=1.6):FaceAnalysis{return{photoId:'synthetic-only',schemaVersion:'1.0.0',landmarks:{status:'empty'},qualityChecks:[],measurements:{status:'ready',value:[{id:'height-cheek',label:'Test',provenance:'calculated-geometry',value:{status:'ready',value:h},unit:'ratio',landmarkIndices:[10,152,234,454],method:{name:'Fixture',version:'test',sources:[]},limitations:[]}]},approximateShape:{status:'ready',value:{label:'oblong',provenance:'styling-interpretation',method:{name:'Fixture',version:'test',sources:[]},rationale:[]}},estimatedMesh:{status:'empty'},visibility:{reviewed:true,obstructed:[],source:'user-reported'},limitations:[]};}
 test('24 unique usable references cover each texture and length with full provenance',()=>{
  assert.equal(HAIRSTYLES.length,24);assert.equal(new Set(HAIRSTYLES.map(s=>s.id)).size,24);
@@ -32,7 +32,7 @@ test('optional actual-proportion guidance changes ties, never overrides practica
  assert.ok(rankStyles(HAIRSTYLES,prefs({texture:'coiled'}),a).every(r=>r.style.texture==='coiled'));
 });
 test('report snapshot uses current photo, preferences, catalog version and complete image credits',()=>{
- const original=analysis(),snapshot=withStyling(original,prefs({texture:'curly'}),HAIRSTYLES);assert.equal(snapshot.photoId,original.photoId);assert.equal(snapshot.styling?.recommendations.length,5);assert.equal(snapshot.styling?.imageCredits.length,5);assert.equal(snapshot.styling?.catalogVersion,'4.0.0');assert.equal(original.styling,undefined);
+ const original=analysis(),snapshot=withStyling(original,prefs({texture:'curly'}),HAIRSTYLES);assert.equal(snapshot.photoId,original.photoId);assert.equal(snapshot.styling?.recommendations.length,5);assert.equal(snapshot.styling?.imageCredits.length,5);assert.equal(snapshot.styling?.catalogVersion,'4.1.0');assert.equal(original.styling,undefined);
  const empty=withStyling(original,prefs({texture:'curly',desiredLength:'long',stylingTime:'5'}),HAIRSTYLES);assert.equal(empty.styling?.recommendations.length,0);assert.equal(empty.styling?.imageCredits.length,0);
 });
 test('care records retain review date and authoritative source links without photo input',()=>{assert.equal(CARE_REVIEW_DATE,'2026-10-18');for(const s of Object.values(CARE_SOURCES)){assert.equal(s.accessedAt,CARE_REVIEW_DATE);assert.match(s.url,/^https:\/\/(www\.aad\.org|aaoinfo\.org)\//);}});
@@ -45,4 +45,15 @@ test('explicit presentation constrains suggestions without inferring gender or p
  assert.equal(rankStyles(HAIRSTYLES,prefs({presentation:'masculine',texture:'straight',desiredLength:'short'})).length,3);
  assert.equal(rankStyles(HAIRSTYLES,prefs({presentation:'masculine',desiredLength:'long'})).length,0);
  for(const style of HAIRSTYLES)assert.ok(style.presentations.length&&style.presentations.every(p=>p==='masculine'||p==='feminine'));
+});
+
+test('fresh visit and reset require an explicit reference choice before suggestions',()=>{
+ assert.equal(DEFAULT_PREFERENCES.presentation,'unset');
+ assert.deepEqual(rankStyles(HAIRSTYLES,DEFAULT_PREFERENCES),[]);
+ assert.deepEqual(rankStyles(HAIRSTYLES,{...DEFAULT_PREFERENCES,presentation:undefined}),[]);
+ const result=recommendStyles(undefined);assert.ok(result.status==='ready'&&result.value.length===0);
+ const snapshot=withStyling(analysis(),DEFAULT_PREFERENCES,HAIRSTYLES);assert.equal(snapshot.styling?.recommendations.length,0);assert.equal(snapshot.styling?.imageCredits.length,0);
+ assert.equal(rankStyles(HAIRSTYLES,prefs({presentation:'masculine'})).length,5);
+ assert.equal(rankStyles(HAIRSTYLES,prefs({presentation:'masculine',texture:'coiled'})).length,0);
+ assert.equal(rankStyles(HAIRSTYLES,prefs({presentation:'any'})).length,24);
 });

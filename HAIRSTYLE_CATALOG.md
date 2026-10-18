@@ -42,3 +42,7 @@ FaceAnalysis.styling stores preferences, Recommendation records, catalog version
 ## Explicit reference presentation (1.1.0)
 
 Each CatalogStyle now carries an editorial `presentations` list (masculine/feminine, sometimes both). This describes how the cut/reference is grouped, not a detected gender or a restriction on wearers. Matching method 4.1.0 applies the visitor's choice before practical/geometry ranking; absent/any retains all 24. Masculine tie order starts with crop, side part, quiff, wavy taper and curly taper. Masculine medium/long coverage is currently missing and disclosed rather than filled with other references. No images, licenses or original rights records changed. Default report favourites must meet current preferences; explicit selections retain their full credits.
+
+## Reference grouping correction (1.1.1)
+
+Catalog 4.1.0 and matching 4.2.0 supersede the preceding presentation metadata. Only the five curated crop/side-part/quiff/wavy-taper/curly-taper references are in the men’s group; the other 19 remain in the women’s group and explicit mixed catalog. This is reference presentation curation, not a claim about anyone’s identity or a rule about who may wear a cut. The earlier overlapping presentation tags and automatic mixed starting selection were confusing and have been removed. Missing coiled and medium/long men’s references are disclosed. No asset, license, generation record or pixel hash changed.

@@ -1,4 +1,4 @@
-# FaceFrame — preference and report improvements (1.1.0)
+# FaceFrame — preference and report improvements (1.1.1)
 
 A React/Vite/TypeScript website with real browser-local still-image landmark detection, traceable apparent proportions, provisional shape descriptions, an annotated contour and an optional estimated mesh. The existing design and contracts are retained. There are 24 locally bundled generated hairstyle references, practical preferences, session favourites/comparison and sourced general care. Phase 5 adds local print/PDF and annotated PNG exports, photo exclusion by default, full-session reset and deployment preparation. No live deployment is claimed.
 
@@ -66,7 +66,7 @@ Runtime requests retrieve only same-origin application files, the worker, hairst
 
 ## Developer verification tools
 
-`npm test` runs 34 metadata, quality, geometry, topology, visibility, shape-rule, catalog/provenance, preference-matching and export/privacy/resource tests. With `npm run dev`, open `/tests/browser.html` for decode/orientation/limit checks, the preview-recovery regression and a test-injected GPU failure followed by real CPU initialization. `tests/camera-fixture.ts` provides controlled streams/errors; it is not imported by the app. Tests are not part of the production entry and no test photos are shipped. Test code never substitutes landmark results.
+`npm test` runs 36 metadata, quality, geometry, topology, visibility, shape-rule, catalog/provenance, preference-matching and export/privacy/resource tests. With `npm run dev`, open `/tests/browser.html` for decode/orientation/limit checks, the preview-recovery regression and a test-injected GPU failure followed by real CPU initialization. `tests/camera-fixture.ts` provides controlled streams/errors; it is not imported by the app. Tests are not part of the production entry and no test photos are shipped. Test code never substitutes landmark results.
 
 See BROWSER_COMPATIBILITY.md for the API review, actual browser/device coverage and remaining release checks. HTTPS is required for public deployment and secure photo-ID/camera APIs; missing secure UUID support now gives a readable message. Camera/worker cleanup also handles page-history suspension, and PNG canvas size is bounded for mobile memory/dimension limits. No detector, geometry/shape rules or quality thresholds were changed by this QA pass.
 
@@ -130,3 +130,9 @@ After publishing, open the actual HTTPS/base URL. Confirm worker/model/WASM/imag
 In Hairstyles, choose Style presentation → Masculine styles, Feminine styles, or All styles/no preference. Presentation is a visitor choice, never inferred from the photo. These editorial reference groups do not restrict who may wear a cut. The current masculine collection focuses on short styles; unavailable combinations return fewer matches instead of unrelated references. Texture and desired length remain strong constraints. Show all styles explicitly bypasses preferences. Preferences remain session-only.
 
 Report starts with an at-a-glance explanation. Review visibility to enable shape guidance; the app never fills an unconfirmed category. The standard print report uses readable labels, a compact method record, sources and full image credits. Enable the optional technical appendix for formulas, indices, thresholds and detailed limitations. Original photo still defaults off independently. Automatic report selection excludes favourites outside current preferences; you can still explicitly select those favourites. Changing preferences reinitializes export choices with photo inclusion off. Calculation algorithms and the model are unchanged.
+
+## Explicit choice before hairstyle images (1.1.1)
+
+A fresh visit or reset now starts with no reference group selected. Uploading a photo does not select gender or populate a mixed recommendation list. In Hairstyles, press **Men’s / masculine styles**, **Women’s / feminine styles**, or explicitly choose **All styles / no preference**. The men’s group contains five curated short-cut reference images (crop, side part, quiff, wavy taper, curly taper). Coiled-texture and medium/long men’s reference coverage is missing; those combinations return no matches instead of substituting other references. All 24 assets remain accessible in explicitly selected mixed browsing.
+
+The gallery labels its active mode. Pressing a group button always exits mixed browsing, resets gallery filters and clears comparison cards, including when that group was already selected. Reset preferences requires a new choice. Choices remain in browser memory only; a reload clears them. A report cannot automatically insert favourites before a group is chosen. Existing geometry, detection and photo-free export behavior remain unchanged. In an already-open Chrome tab, use Ctrl+Shift+R to load the updated build, then upload again and choose your group.

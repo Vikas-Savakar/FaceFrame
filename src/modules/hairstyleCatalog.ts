@@ -213,7 +213,6 @@ export const HAIRSTYLES: CatalogStyle[] = [
       }
     },
     "presentations": [
-      "masculine",
       "feminine"
     ]
   },
@@ -539,7 +538,6 @@ export const HAIRSTYLES: CatalogStyle[] = [
       }
     },
     "presentations": [
-      "masculine",
       "feminine"
     ]
   },
@@ -1024,7 +1022,6 @@ export const HAIRSTYLES: CatalogStyle[] = [
       }
     },
     "presentations": [
-      "masculine",
       "feminine"
     ]
   },
@@ -1187,7 +1184,6 @@ export const HAIRSTYLES: CatalogStyle[] = [
       }
     },
     "presentations": [
-      "masculine",
       "feminine"
     ]
   },
@@ -1242,7 +1238,7 @@ export const HAIRSTYLES: CatalogStyle[] = [
       }
     },
     "presentations": [
-      "masculine"
+      "feminine"
     ]
   },
   {

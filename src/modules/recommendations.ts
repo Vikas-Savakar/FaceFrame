@@ -2,16 +2,16 @@ import type { CatalogStyle, FaceAnalysis, Recommendation, Result, StylingPrefere
 
 import { HAIRSTYLES } from './hairstyleCatalog.ts';
 
-export const CATALOG_VERSION='4.0.0';
+export const CATALOG_VERSION='4.1.0';
 
-export const DEFAULT_PREFERENCES:StylingPreferences={presentation:'any',texture:'any',currentLength:'any',desiredLength:'any',stylingTime:'any',preferredStyles:[],facialHair:'unknown',allowGrowOut:false,useGeometry:true};
+export const DEFAULT_PREFERENCES:StylingPreferences={presentation:'unset',texture:'any',currentLength:'any',desiredLength:'any',stylingTime:'any',preferredStyles:[],facialHair:'unknown',allowGrowOut:false,useGeometry:true};
 
 export const STYLE_TAGS=['crop','bob','layers','fringe','taper','volume'];
 
-export const MATCH_METHOD={name:'FaceFrame preferences-first styling rules',version:'4.1.0',sources:[]};
+export const MATCH_METHOD={name:'FaceFrame preferences-first styling rules',version:'4.2.0',sources:[]};
 
 const featured=['textured-crop','wavy-lob','curly-long-layers','rounded-coils','straight-bob'];
-const masculineFeatured=['textured-crop','straight-side-part','straight-quiff','wavy-taper','curly-taper','coiled-high-top'];
+const masculineFeatured=['textured-crop','straight-side-part','straight-quiff','wavy-taper','curly-taper'];
 const editorialOrder=(id:string,presentation?:string)=>{const order=presentation==='masculine'?masculineFeatured:featured;const index=order.indexOf(id);return index<0?order.length:index;};
 const lengths={short:1,medium:2,long:3};
 
@@ -28,12 +28,14 @@ export function geometryContext(analysis?:FaceAnalysis):string {
 export function rankStyles(catalog:CatalogStyle[],preferences:StylingPreferences,analysis?:FaceAnalysis):Array<{style:CatalogStyle;reasons:string[]}> {
 
   const p=preferences;
+  const presentation=p.presentation;
+  if(!presentation||presentation==='unset')return [];
 
   const geometryOK=p.useGeometry&&analysis?.visibility?.reviewed&&analysis.approximateShape.status==='ready'&&analysis.approximateShape.value.label!=='uncertain';
 
   const metric=(id:string)=>{const m=analysis?.measurements.status==='ready'?analysis.measurements.value.find(m=>m.id===id)?.value:undefined;return m?.status==='ready'&&Number.isFinite(m.value)?m.value:undefined;};
 
-  return catalog.filter(s=>s.referenceImage.status==='ready'&&(!p.presentation||p.presentation==='any'||s.presentations.includes(p.presentation))&&(p.texture==='any'||s.texture===p.texture)&&(p.desiredLength==='any'||s.length===p.desiredLength)&&(p.stylingTime==='any'||s.dailyMinutes<=Number(p.stylingTime))&&(!p.preferredStyles.length||p.preferredStyles.some(tag=>s.tags.includes(tag)))&&(p.currentLength==='any'||p.allowGrowOut||lengths[s.length]<=lengths[p.currentLength])).map(style=>{
+  return catalog.filter(s=>s.referenceImage.status==='ready'&&(presentation==='any'||s.presentations.includes(presentation))&&(p.texture==='any'||s.texture===p.texture)&&(p.desiredLength==='any'||s.length===p.desiredLength)&&(p.stylingTime==='any'||s.dailyMinutes<=Number(p.stylingTime))&&(!p.preferredStyles.length||p.preferredStyles.some(tag=>s.tags.includes(tag)))&&(p.currentLength==='any'||p.allowGrowOut||lengths[s.length]<=lengths[p.currentLength])).map(style=>{
 
     let priority=p.currentLength===style.length?20:0;
 

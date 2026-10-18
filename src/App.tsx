@@ -27,7 +27,7 @@ export default function App() {
   const [gallery,setGallery]=useState<GallerySession>({favourites:[],comparison:[],showAll:false});
   const [care,setCare]=useState<CareChoices>({concern:'general',jawline:false});
   function enrich(result:AnalysisSession['analysis']):AnalysisSession['analysis'] {return result.status==='ready'?{status:'ready',value:withStyling(result.value,preferences,HAIRSTYLES)}:result;}
-  function updatePreferences(next:StylingPreferences){setPreferences(next);setSession(current=>current&&current.analysis.status==='ready'?{...current,analysis:{status:'ready',value:withStyling(current.analysis.value,next,HAIRSTYLES)}}:current);}
+  function updatePreferences(next:StylingPreferences){if(next.presentation!==preferences.presentation)setGallery(current=>({...current,showAll:false,comparison:[]}));setPreferences(next);setSession(current=>current&&current.analysis.status==='ready'?{...current,analysis:{status:'ready',value:withStyling(current.analysis.value,next,HAIRSTYLES)}}:current);}
   const mainRef = useRef<HTMLElement>(null);
   const firstRender = useRef(true);
   useEffect(() => { if (firstRender.current) { firstRender.current = false; return; } mainRef.current?.focus(); }, [section,visit]);
