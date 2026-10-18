@@ -116,5 +116,5 @@ export interface ReportCareChoices { concern:'general'|'sun'|'pigmentation'; jaw
 export interface FinalReportData {
   generatedAt:string; photoPreparedAt:string; analysis:FaceAnalysis;
   selectedStyles:Array<{style:CatalogStyle;reason:string}>;
-  care:ReportCareChoices; includePhoto:boolean; includeTechnicalDetails?:boolean; formatVersion:'5.0.0' | '5.1.0';
+  care:ReportCareChoices; includePhoto:boolean; includeTechnicalDetails?:boolean; formatVersion:'5.0.0' | '5.1.0' | '5.2.0';
 }

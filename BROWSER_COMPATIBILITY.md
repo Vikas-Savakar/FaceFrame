@@ -2,6 +2,8 @@
 
 This is a code/API review plus the explicitly recorded tests below. It is not a cross-browser certification. No user-agent spoofing or desktop viewport emulation is counted as a physical mobile/Safari/Firefox test.
 
+2026-10-19 interface update: production upload, real inference, automatic Results navigation, invalid-input focus, hairstyle filtering/comparison, local PNG and A4/Letter print-engine output were checked again in Windows embedded Chromium. Viewports of 320, 390 and 844 CSS pixels were exercised; these are responsive layout checks only. Shared reference images retain local preview/original fallback. No new camera API, worker/runtime or renderer dependency was introduced. Physical hardware and the other browser rows below remain unverified in this update.
+
 ## Actual coverage
 
 | Target | What was actually available | Release check still needed |

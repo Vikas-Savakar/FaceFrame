@@ -1,4 +1,4 @@
-# FaceFrame — preference and report improvements (1.1.1)
+# FaceFrame — clearer interface and report (1.2.0)
 
 A React/Vite/TypeScript website with real browser-local still-image landmark detection, traceable apparent proportions, provisional shape descriptions, an annotated contour and an optional estimated mesh. The existing design and contracts are retained. There are 24 locally bundled generated hairstyle references, practical preferences, session favourites/comparison and sourced general care. Phase 5 adds local print/PDF and annotated PNG exports, photo exclusion by default, full-session reset and deployment preparation. No live deployment is claimed.
 
@@ -26,11 +26,11 @@ Build checks pinned asset hashes, strict TypeScript and production bundling. Pre
 
 ## Use
 
-1. Choose Upload a photo or drop exactly one JPEG, PNG or WebP into the upload card.
+1. Choose Men’s styles, Women’s styles or All styles before uploading. This is your reference preference; the app never infers gender from your photo. Then choose Upload a photo or drop exactly one JPEG, PNG or WebP into the upload card.
 2. Alternatively, choose Start camera, allow video access, then Capture. Retake opens a new preview. Close camera cancels capture. Camera requires HTTPS or localhost; embedded browsers may restrict access. Upload remains available.
 3. The same pipeline prepares either source and automatically loads the local detector, analyzes one still in a worker and runs the implemented quality checks. No continuous video analysis occurs.
-4. Exactly one detected face that passes the checks gets an actual landmark/contour overlay. The checkbox toggles it. Reasons are given for no/multiple faces or rejected quality. Retry analysis or Retry using CPU handles recoverable model/runtime errors.
-5. Open structure report to inspect five image-plane ratios and their exact endpoint selections. Review visibility; reported obstructions make affected values unavailable. Shape suggestions and the optional contour angle require confirmation. Compare the prepared photo, actual landmarks and annotated outline; optionally open and rotate the estimated mesh.
+4. Exactly one detected face that passes the checks opens Results automatically. No/multiple faces and rejected quality remain in the capture workspace with a retake reason. Open Analysis status & photo for the actual landmark overlay or retry controls; Retry using CPU handles recoverable runtime errors.
+5. Results leads with the actual outline, plain-language explanation and three highlighted proportions. Review visibility before shape guidance; reported obstructions make affected values unavailable. All proportions & measurement methods retains every calculation. Explore landmarks & the estimated 3D mesh contains photo/landmark/outline views, endpoint inspection and optional rotation. Download report is at the top of Results and in the persistent header.
 6. Navigation retains the current photo/report in browser memory. Clear photo / reset, Retake photo, choosing replacement input or reloading invalidates the report. Leaving capture stops the camera and its worker. Switching browser tabs stops a live camera. Start over / Delete current analysis also clears independent visit preferences, favourites, comparisons, care choices and pending exports.
 
 ## Input limits and canonical image
@@ -66,7 +66,7 @@ Runtime requests retrieve only same-origin application files, the worker, hairst
 
 ## Developer verification tools
 
-`npm test` runs 36 metadata, quality, geometry, topology, visibility, shape-rule, catalog/provenance, preference-matching and export/privacy/resource tests. With `npm run dev`, open `/tests/browser.html` for decode/orientation/limit checks, the preview-recovery regression and a test-injected GPU failure followed by real CPU initialization. `tests/camera-fixture.ts` provides controlled streams/errors; it is not imported by the app. Tests are not part of the production entry and no test photos are shipped. Test code never substitutes landmark results.
+`npm test` runs 37 metadata, quality, geometry, topology, visibility, shape-rule, catalog/provenance, preference-matching and export/privacy/resource tests. With `npm run dev`, open `/tests/browser.html` for decode/orientation/limit checks, the preview-recovery regression and a test-injected GPU failure followed by real CPU initialization. `tests/camera-fixture.ts` provides controlled streams/errors; it is not imported by the app. Tests are not part of the production entry and no test photos are shipped. Test code never substitutes landmark results.
 
 See BROWSER_COMPATIBILITY.md for the API review, actual browser/device coverage and remaining release checks. HTTPS is required for public deployment and secure photo-ID/camera APIs; missing secure UUID support now gives a readable message. Camera/worker cleanup also handles page-history suspension, and PNG canvas size is bounded for mobile memory/dimension limits. No detector, geometry/shape rules or quality thresholds were changed by this QA pass.
 
@@ -88,9 +88,9 @@ Care asks the visitor's concern rather than examining skin colour. General sun/g
 
 ## Final report and local export
 
-1. After suitable detection, open Report. Review quality/visibility, then set practical preferences and optionally favourite references in Hairstyles. Return to Report to select up to five references. Export selection defaults to favourites (up to five), otherwise the first three suggestions. Gallery choices outside current preferences are identified.
+1. Suitable detection opens Results. Review visibility, then set practical preferences and optionally favourite references in Hairstyles. Download report in the header opens the final preview from any section. In Results, Export options & selected hairstyles lets you select up to five references. Defaults use preference-compatible favourites, otherwise the first three suggestions. Gallery choices outside current preferences are identified.
 2. **Include my original photo (prepared)** starts off whenever export controls mount. This applies to print/PDF and PNG independently of the screen photo/landmark toggle. Off uses only an outline from actual detected points. On includes the orientation-corrected, resized canonical photo, not the raw upload.
-3. Open final report / print preview. It includes dates, actual quality/available values and unavailable reasons, outline, selected references and complete credits, selected care information, limitations, sources and method versions. No new inference runs. Reference images decode before printing is enabled; failed images retain their credit and a clear message.
+3. Press **Download report** to open the local print preview. It includes dates, actual quality/available values and unavailable reasons, outline, selected references, care, limitations, sources and method versions. Complete image credits have their own always-included section. No new inference runs. Reference images decode before printing is enabled; failed images retain their credit and a clear message.
 4. Choose **Print / Save as PDF**, then Save as PDF in the browser dialog. Use A4 or Letter, portrait, normal scale; optionally disable browser headers/footers. Text is selectable, with section/card page breaks. Drivers and browser defaults vary. Embedded browsers may restrict the native dialog; open the site directly in a full browser. No server or paid PDF service is involved.
 5. **Download annotated structure image** requests a local PNG with the actual outline/spans, rounded values and method versions. Every export uses a fresh canvas. Photo-free export never decodes/draws the photo. Bitmaps/canvases are released after encoding, including cancellation/error paths.
 6. **Start over / Delete current analysis** clears the whole visit, pending work and resources. Retake/Clear photo invalidate the photo/report while allowing independent preferences to remain. Reset cannot delete already saved exports or guarantee forensic memory erasure. Use browser/OS file controls for saved PDFs/PNGs.
@@ -125,14 +125,20 @@ Open http://127.0.0.1:4173/faceframe/. A separate `/faceframe/` production build
 After publishing, open the actual HTTPS/base URL. Confirm worker/model/WASM/images load, upload a permission-cleared photo, inspect alignment/geometry, change preferences, save photo-free PDF/PNG, test photo opt-in/out and reset during analysis. Test camera start/capture/close on target hardware. Confirm only public static downloads and no photo/report network payloads. Inspect A4/Letter and target browsers/devices before claiming those deployment checks. No live-host validation has been performed here.
 
 
-## Style presentation and readable reports (1.1.0)
+## Historical style presentation and readable reports (1.1.0)
 
 In Hairstyles, choose Style presentation → Masculine styles, Feminine styles, or All styles/no preference. Presentation is a visitor choice, never inferred from the photo. These editorial reference groups do not restrict who may wear a cut. The current masculine collection focuses on short styles; unavailable combinations return fewer matches instead of unrelated references. Texture and desired length remain strong constraints. Show all styles explicitly bypasses preferences. Preferences remain session-only.
 
 Report starts with an at-a-glance explanation. Review visibility to enable shape guidance; the app never fills an unconfirmed category. The standard print report uses readable labels, a compact method record, sources and full image credits. Enable the optional technical appendix for formulas, indices, thresholds and detailed limitations. Original photo still defaults off independently. Automatic report selection excludes favourites outside current preferences; you can still explicitly select those favourites. Changing preferences reinitializes export choices with photo inclusion off. Calculation algorithms and the model are unchanged.
 
-## Explicit choice before hairstyle images (1.1.1)
+## Historical explicit-choice update (1.1.1)
 
 A fresh visit or reset now starts with no reference group selected. Uploading a photo does not select gender or populate a mixed recommendation list. In Hairstyles, press **Men’s / masculine styles**, **Women’s / feminine styles**, or explicitly choose **All styles / no preference**. The men’s group contains five curated short-cut reference images (crop, side part, quiff, wavy taper, curly taper). Coiled-texture and medium/long men’s reference coverage is missing; those combinations return no matches instead of substituting other references. All 24 assets remain accessible in explicitly selected mixed browsing.
 
 The gallery labels its active mode. Pressing a group button always exits mixed browsing, resets gallery filters and clears comparison cards, including when that group was already selected. Reset preferences requires a new choice. Choices remain in browser memory only; a reload clears them. A report cannot automatically insert favourites before a group is chosen. Existing geometry, detection and photo-free export behavior remain unchanged. In an already-open Chrome tab, use Ctrl+Shift+R to load the updated build, then upload again and choose your group.
+
+## Current interface refinement (1.2.0)
+
+The existing application now uses a three-step photo/results/styles journey, a compact capture screen, explicit reference choice before upload, clearer measurement highlights and prominent report access. Secondary preferences, filters, formulas and mesh controls remain available under labelled disclosures. Men’s styling coverage is still five short-cut references; the other catalog assets and all rights records are preserved. See DESIGN_REVIEW.md for the eight analyzer references and 21st.dev reviewed before implementation.
+
+Screen CSS is isolated in `src/interface.css`; print styling remains independent. No new runtime dependencies, detector changes, quality-threshold changes or shape-rule changes were introduced. Report format 5.2.0 removes repeated reference metadata from the reading path and retains full credits separately. This is a modification of the same React codebase. No replacement app or live deployment is claimed.

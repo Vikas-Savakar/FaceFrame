@@ -5,7 +5,7 @@ import {defaultReportStyles,renderReport,structureDrawing} from '../src/modules/
 import {resolveAssetPath} from '../src/modules/assets.ts';
 import {LocalDownloads,renderStructureImage,structureImageLayout} from '../src/modules/structureExport.ts';
 import {referencePreview} from '../src/modules/referencePreview.ts';
-import {reportTakeaways,readableMeasurement} from '../src/modules/reportSummary.ts';
+import {reportTakeaways,readableMeasurement,readableStyleReason} from '../src/modules/reportSummary.ts';
 import {HAIRSTYLES} from '../src/modules/hairstyleCatalog.ts';
 // Known developer geometry only; never imported into the production application.
 function fixture():FaceAnalysis{
@@ -70,4 +70,10 @@ test('unselected reference group cannot auto-add mixed favourites to a report',(
  const a=fixture();assert.deepEqual(defaultReportStyles(a,['straight-bob','textured-crop'],HAIRSTYLES),[]);
  a.styling={preferences:{presentation:'unset',texture:'any',currentLength:'any',desiredLength:'any',stylingTime:'any',preferredStyles:[],facialHair:'unknown',allowGrowOut:false,useGeometry:false},recommendations:[],catalogVersion:'4.1.0',imageCredits:[]};
  assert.deepEqual(defaultReportStyles(a,['straight-bob','textured-crop'],HAIRSTYLES),[]);
+});
+
+test('readable reference reasons remove repeated metadata but retain grow-out and actual geometry',()=>{
+ const reason='Matches your chosen masculine style presentation. Reference texture: straight. short length option. About 5 minutes of daily styling is a planning estimate; your routine may vary. Grow-out option: more length is needed first; this is not an immediate cut. Visible height/cheek span 1.18: top volume offers an optional vertical styling line.';
+ const copy=readableStyleReason(reason);assert.doesNotMatch(copy,/Reference texture|length option|About 5 minutes/);assert.match(copy,/chosen masculine/);assert.match(copy,/Grow-out option/);assert.match(copy,/1.18/);
+ const manual='Selected from the reference gallery. This selection may fall outside the current recommendation preferences.';assert.equal(readableStyleReason(manual),manual);
 });

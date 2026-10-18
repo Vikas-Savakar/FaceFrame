@@ -16,7 +16,7 @@ export function renderReport(analysis:FaceAnalysis, options:{photoId:string;phot
  const generatedAt=options.generatedAt??new Date().toISOString();
  if(!Number.isFinite(Date.parse(generatedAt))||!Number.isFinite(Date.parse(options.photoPreparedAt)))return{status:'unavailable',reason:{code:'insufficient-data',message:'Report dates are unavailable.'}};
  const selectedStyles=[...new Set(options.selectedIds)].flatMap(id=>{const style=options.catalog.find(s=>s.id===id);if(!style||style.referenceImage.status!=='ready')return[];const rec=analysis.styling?.recommendations.find(r=>r.content.status==='ready'&&r.content.value.hairstyleId===id);return[{style,reason:rec?.content.status==='ready'?rec.content.value.explanation:'Selected from the reference gallery. This selection may fall outside the current recommendation preferences.'}];});
- return{status:'ready',value:{generatedAt,photoPreparedAt:options.photoPreparedAt,analysis,selectedStyles,care:{...options.care},includePhoto:options.includePhoto===true,includeTechnicalDetails:options.includeTechnicalDetails===true,formatVersion:'5.1.0'}};
+ return{status:'ready',value:{generatedAt,photoPreparedAt:options.photoPreparedAt,analysis,selectedStyles,care:{...options.care},includePhoto:options.includePhoto===true,includeTechnicalDetails:options.includeTechnicalDetails===true,formatVersion:'5.2.0'}};
 }
 /** Photo-free drawing data. No PhotoAsset, canvas, screenshot or pixel buffer enters here. */
 export function structureDrawing(analysis:FaceAnalysis){

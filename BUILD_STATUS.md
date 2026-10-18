@@ -1,6 +1,34 @@
 # FaceFrame build status
 
-## Current delivery: explicit reference choice — 1.1.1 (2026-10-18)
+## Current delivery: clearer interface and report — 1.2.0 (2026-10-19)
+
+User requested a less crowded, more polished interface with obvious report access, keeping the existing application. Reviewed eight analyzer sites (six live visual reviews and two primary-text-only reviews), plus 21st.dev. DESIGN_REVIEW.md records the links, actual coverage and adopted patterns. No third-party portraits, templates, component code, remote scripts or new dependencies were copied into the app.
+
+### Changes made
+
+- Retained the forest-green identity and existing React modules. Added a lighter screen-only stylesheet, a photo/results/styles journey, quieter capture guidance and progressive disclosure of secondary controls. Core upload/camera handlers, local inference, quality thresholds, geometry, shape rules, mesh calculations and asset files are unchanged.
+- Explicit Men’s / Women’s / All styles choice now appears before upload and in Hairstyles. No choice means no mixed suggestions. Men’s stays limited to the five verified short-cut references; missing coiled/medium/long coverage is disclosed. No gender is inferred from the photograph. Practical preferences remain strong constraints.
+- Successful accepted inference opens Results automatically; rejected inputs stay in capture. Error/no-face/multiple-face states move keyboard focus to the visible status heading. The result leads with an actual photo-free contour, plain-language explanation and three real proportions. All measurements, unavailable reasons, endpoint inspection, sources and optional mesh remain available in labelled sections. Visibility confirmation is still required for shape guidance.
+- Download report is prominent in the header and result bar. It opens the existing local print preview, including when invoked from Hairstyles. Export options retain explicit photo and technical-appendix opt-ins, selected references, PNG and reset. Photo inclusion remains off by default.
+- Core hair preferences and image cards are visible promptly. Extra preferences, filters, reasons and card details remain expandable; comparison appears only when used. Shared reference rendering preserves preview/original-image fallback. Favourites, comparison, source records and all 24 assets remain intact.
+- Report format 5.2.0 removes duplicated reference metadata from explanatory reasons while preserving preference, grow-out and actual-geometry statements. Three selected cuts fit together in the tested print report; full rights records have a separate always-included credits section. Compact methods/care sources remain; detailed formulas are optional.
+
+### Verification actually performed for 1.2.0
+
+- Baseline 36 tests and TypeScript passed before editing. Final **37/37 tests**, strict TypeScript and production build passed. Added a focused reason-readability regression; existing assertions were retained. Build validates 7 pinned model/runtime assets, 24 original PNG/rights records and 24 preview derivatives. No inference/calculation algorithm or model asset was modified.
+- Production preview in Windows embedded Chromium: permission-cleared NASA crop produced exactly one detected face and 478 actual landmarks, then opened Results. The prior worker was terminated on navigation. Visibility review updated the actual shape state. Actual overlay canvas matched the prepared 420 × 580 image; optional mesh rendered and rotated with its controls. No mocked landmark output was used.
+- Real no-face and two-face fixtures produced counts 0 and 2 and clear rejection messages without automatic successful reports. Corrupt JPEG produced “Truncated JPEG image.” All three failure paths focused `analysis-title`. Reset left 0 workers, 0 canvases, 0 photo images and no selected group. Existing broader error/camera/race tests are documented in the historical QA below; they are not all claimed as newly repeated here.
+- Men’s showed exactly crop, side part, quiff, wavy taper and curly taper. Curly texture narrowed the gallery to Curly taper. Explicit mixed browsing decoded all 24 correct 768-pixel preview images. Returning to Men’s cleared mixed comparisons. Three comparisons were allowed; a fourth gave the existing limit message. Header export opened the actual report, and its default selected styles belonged to the chosen group.
+- Inspected layouts at 320, 390 and 844 CSS-pixel widths, including mobile navigation, capture, Results, mesh, Care and references. Exercised narrow views had no document overflow. Mobile/coarse controls have at least 44-pixel minimum heights. These are desktop viewport tests, not physical-device validation.
+- Final A4 and Letter print-engine PDFs were each four pages for the tested three-reference report. Rendered and visually inspected every page: summary/proportions, all three cuts, outline/care/methods and complete image credits. Both retained 7,858 extracted text characters. No clipped content or stranded footer was observed. Native OS print dialog, printers and other browser print engines remain untested; page counts vary with choices.
+- Actual PNG exports were exercised off → on → off. The two photo-free outputs were byte-identical (800 × 1325); the explicitly photo-bearing export differed. Checked photo-free report previews had no prepared-photo canvases. Changing the on-screen view did not silently include photo pixels.
+- Runtime resource inspection observed zero external HTTP resource entries and empty local/session storage in the exercised production page. Source review retained only same-origin model/static downloads, no face-data telemetry or backend transmission. Reset terminated the observed worker. This is limited to the exercised build/session, not a forensic erasure or full security certification.
+
+### Remaining limits and handoff
+
+Only Windows embedded Chromium was exercised by this update. Standalone Chrome automation, Firefox, macOS/iOS Safari, Android Chrome, physical mobile devices, camera hardware and native print/save dialogs were not newly verified. No real camera capture is claimed for this interface pass; earlier controlled camera lifecycle checks remain historical evidence. No live-host deployment or publication is claimed. Five men’s references are available out of 24 total; expanding men’s texture/length coverage requires suitable verified assets. Setup, preview and HTTPS deployment commands remain in README.md. The current local production preview is for review, not a public URL.
+
+## Historical delivery: explicit reference choice — 1.1.1 (2026-10-18)
 
 Repeated mixed-gallery feedback revealed that 1.1.0 still started with All styles and that choosing an already-selected group did not exit explicit mixed browsing. This follow-up addresses those actual paths without inferring gender from a photo.
 

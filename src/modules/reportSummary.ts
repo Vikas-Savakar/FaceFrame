@@ -1,5 +1,11 @@
 import type {FaceAnalysis,Measurement} from '../contracts.ts';
 
+/** Remove only metadata repeated immediately beside the reference. Keep all actual constraints and geometry rationale. */
+export function readableStyleReason(reason:string):string{
+ const meaningful=reason.split('. ').filter(sentence=>!/^Reference texture: /.test(sentence)&&!/^(short|medium|long) length option\.?$/.test(sentence)&&!/^About \d+ minutes of daily styling is a planning estimate/.test(sentence));
+ return meaningful.join('. ');
+}
+
 const wording:Record<string,{label:string;sentence:(v:string)=>string}>={
  'height-cheek':{label:'Face height compared with width',sentence:v=>`The visible face height is ${v} times the width across the cheek contour.`},
  'lower-cheek':{label:'Lower-face width',sentence:v=>`The lower-face contour is ${v} times the cheek-contour width.`},
