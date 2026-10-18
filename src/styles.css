@@ -27,3 +27,8 @@
 /* Preserve the visual identity while giving narrow-screen actions reliable hit areas. */
 @media screen{.text-link,summary{min-height:32px}summary{padding-top:4px;padding-bottom:4px}}
 @media screen and (max-width:900px),screen and (pointer:coarse){.menu-toggle,.text-link,.comparison-status a,.site-header nav button{min-height:44px}summary{min-height:44px;padding-top:9px;padding-bottom:9px}.review-confirm,.visibility-options label,.photo-view label,.gallery-filters>label:last-child{min-height:44px}.field select{font-size:16px}.mesh-controls input[type=range]{min-height:44px}}
+
+/* Keep the standard report concise; technical detail is an explicit appendix. */
+.report-takeaways li{margin-bottom:2mm}.report-paper .print-structure{margin-top:4mm}.report-paper .print-method-record{font-size:8.5pt}.report-paper .print-structure .final-outline svg,.report-paper .print-structure .print-photo canvas{height:45mm}.print-appendix{font-size:9pt}.print-appendix .print-method-list{line-height:1.4}.print-styles .print-style{break-inside:avoid}
+
+@media print{.print-summary h2{margin:4mm 0 2mm}.print-summary .print-measurements th,.print-summary .print-measurements td{padding:1.5mm}.report-paper .print-structure .final-outline svg,.report-paper .print-structure .print-photo canvas{height:35mm}.print-care .print-structure{margin-top:0}.print-care .print-method-record{font-size:8.5pt;line-height:1.3}.report-paper footer{break-before:avoid}}

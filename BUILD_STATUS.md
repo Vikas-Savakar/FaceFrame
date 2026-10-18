@@ -1,6 +1,27 @@
 # FaceFrame build status
 
-## Current delivery: post-build QA — 1.0.1 (2026-10-18)
+## Current delivery: style preferences and readable reports — 1.1.0 (2026-10-18)
+
+User feedback identified mixed references presented without a style-presentation choice and a report that was too technical/repetitive. This update preserves the analyzer, model assets, geometry/shape algorithms, original image assets, privacy model and visual identity.
+
+- Added visitor-selected Masculine styles / Feminine styles / All styles-no preference. Catalog entries have editorial presentation tags (sometimes both); these classify references, not a person's identity, and do not restrict who can wear a cut. Matching 4.1.0 filters presentation before other practical preferences and optional geometry. No gender is inferred from a photograph. Masculine medium/long coverage is currently missing and disclosed; no unrelated match is used to fill five slots.
+- Unreviewed/default masculine suggestions begin with Textured crop, Classic side part, Quiff, Wavy taper and Curly taper. Existing practical/geometry tie rules still apply after choosing texture, length or reviewing geometry. All-style browsing remains available. All 24 original assets/rights records and WebP previews are retained.
+- Reports now lead with plain-language takeaways and readable measurement labels; all numbers come from the same actual analysis. A visible link explains the visibility review needed before shape guidance. Technical endpoint inspection is collapsed on screen. Formulas, indices, thresholds and full limitations are available through an explicit technical-appendix export option (off by default); compact versions and source links are always printed. Report format is 5.1.0. Original photo remains independently off by default.
+- Automatic report selection now uses only preference-compatible favourites, or matching recommendations. Other favourites require explicit selection. Export controls reinitialize after preference/favourite changes, preventing stale selections and resetting photo inclusion off.
+- Reduced repeated caveats and corrected print pagination discovered during this pass (a stranded footer and an almost-empty Letter page). Image credits and care sources remain present; optional photo and appendix behavior were not hidden.
+
+### Checks actually performed for 1.1.0
+
+- 34/34 tests passed, including new presentation filtering/editorial order, no-padding, out-of-preference favourite defaults, actual-value summaries, unavailable values and appendix/photo opt-in tests. Existing geometry/model/privacy regressions remain passing. Strict TypeScript and production build passed; 7 pinned model/runtime assets plus all 24 original PNG/rights and 24 derivative checks passed.
+- Production website in Windows embedded Chromium performed real inference on the permission-cleared NASA fixture: one face, 478 landmarks. Masculine selection produced the five intended initial suggestions; default print selection contained crop/side-part/quiff. After visibility review, the actual shape state updated and available geometry affected optional tie order as before.
+- An old Straight bob favourite was created under All styles, then presentation changed to masculine. It was not silently selected in the final report. Returning from preference changes reset the technical appendix and photo options off. No photo canvas existed in checked photo-free reports.
+- The actual final standard A4 and Letter outputs were each four pages for the tested three-reference, unreviewed fixture. Every page was rendered and visually inspected: readable summary, complete measurement rows, correct three references, sources and credits, no clipped content or stray footer page. Text remained selectable (A4 7,784 extracted characters). Enabling the appendix produced five A4 pages; the final appendix page was visually inspected and contained formulas, indices, rule settings and limitations. Page count varies with choices; no native printer/Safari/Firefox print verification is claimed.
+- At a 390-pixel CSS viewport the new controls had no document overflow (client/scroll width 375). This is not a physical mobile-device test. Runtime inspection found zero external resource entries and empty local/session storage in the exercised page. No visitor PDF/photo, derived face data or QA report is committed or pushed.
+- Standalone Chrome automation, physical camera, Safari, Firefox, Android/iOS and live-host checks remain unperformed as recorded below. Website remains locally served; a GitHub source update is not a deployment.
+
+## Historical 1.0.1 QA checkpoint
+
+## Delivery: post-build QA — 1.0.1 (2026-10-18)
 
 The five phases remain implemented; this pass fixes reliability and delivery issues without redesigning the app or adding product features. The real analyzer, 24-reference catalog and local exports work in the tested environment. No known core asset or export blocker remains there. Cross-browser/device and live-host release checks below remain open; this is not a claim of universal browser compatibility or deployment.
 

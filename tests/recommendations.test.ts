@@ -36,3 +36,13 @@ test('report snapshot uses current photo, preferences, catalog version and compl
  const empty=withStyling(original,prefs({texture:'curly',desiredLength:'long',stylingTime:'5'}),HAIRSTYLES);assert.equal(empty.styling?.recommendations.length,0);assert.equal(empty.styling?.imageCredits.length,0);
 });
 test('care records retain review date and authoritative source links without photo input',()=>{assert.equal(CARE_REVIEW_DATE,'2026-10-18');for(const s of Object.values(CARE_SOURCES)){assert.equal(s.accessedAt,CARE_REVIEW_DATE);assert.match(s.url,/^https:\/\/(www\.aad\.org|aaoinfo\.org)\//);}});
+
+test('explicit presentation constrains suggestions without inferring gender or padding matches',()=>{
+ const masculine=rankStyles(HAIRSTYLES,prefs({presentation:'masculine'}));assert.ok(masculine.length>=5);assert.deepEqual(masculine.slice(0,5).map(r=>r.style.id),['textured-crop','straight-side-part','straight-quiff','wavy-taper','curly-taper']);assert.ok(masculine.every(r=>r.style.presentations.includes('masculine')));assert.ok(masculine.every(r=>r.reasons.some(t=>t.includes('chosen masculine'))));
+ assert.ok(!masculine.some(r=>['straight-bob','wavy-lob','curly-long-layers'].includes(r.style.id)));
+ const feminine=rankStyles(HAIRSTYLES,prefs({presentation:'feminine'}));assert.ok(feminine.every(r=>r.style.presentations.includes('feminine')));
+ assert.equal(rankStyles(HAIRSTYLES,prefs({presentation:'any'})).length,24);
+ assert.equal(rankStyles(HAIRSTYLES,prefs({presentation:'masculine',texture:'straight',desiredLength:'short'})).length,3);
+ assert.equal(rankStyles(HAIRSTYLES,prefs({presentation:'masculine',desiredLength:'long'})).length,0);
+ for(const style of HAIRSTYLES)assert.ok(style.presentations.length&&style.presentations.every(p=>p==='masculine'||p==='feminine'));
+});

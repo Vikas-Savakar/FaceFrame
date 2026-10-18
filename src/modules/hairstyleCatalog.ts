@@ -50,7 +50,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-f44ac0e6-274e-4e18-9b61-379101c6e508.png"
       }
-    }
+    },
+    "presentations": [
+      "masculine"
+    ]
   },
   {
     "id": "straight-bob",
@@ -100,7 +103,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-23507a37-7615-47f4-bf46-f3467c4ef2f9.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "straight-long-layers",
@@ -150,7 +156,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-d5a90a37-5add-4955-9f69-2643a324971b.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "wavy-pixie",
@@ -202,7 +211,11 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-b3468f58-3f5f-492e-94af-485a5555af26.png"
       }
-    }
+    },
+    "presentations": [
+      "masculine",
+      "feminine"
+    ]
   },
   {
     "id": "wavy-lob",
@@ -253,7 +266,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-5afc6330-f432-41fd-99e9-fab22897f79d.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "wavy-curtains",
@@ -304,7 +320,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-c4aa8806-fc98-4ff2-8bed-cf791c2588a3.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "curly-taper",
@@ -355,7 +374,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-2b7a36bb-31d4-4730-a78a-a0d8058954c5.png"
       }
-    }
+    },
+    "presentations": [
+      "masculine"
+    ]
   },
   {
     "id": "curly-shag",
@@ -407,7 +429,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-404258c0-2029-40e7-b866-5c941d6d4925.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "curly-long-layers",
@@ -458,7 +483,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-082bf5e1-b521-49e7-88e3-0aa683dffcdb.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "coiled-taper",
@@ -509,7 +537,11 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-ad8c6865-e4d6-45f8-afd0-e5ce2c833461.png"
       }
-    }
+    },
+    "presentations": [
+      "masculine",
+      "feminine"
+    ]
   },
   {
     "id": "rounded-coils",
@@ -560,7 +592,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-3e200db0-192b-45e8-9104-28c81d9a2dfd.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "long-coils",
@@ -611,10 +646,12 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-e4178564-ed92-4cc9-a574-fbdcafaf1a7f.png"
       }
-    }
-  }
-,
-{
+    },
+    "presentations": [
+      "feminine"
+    ]
+  },
+  {
     "id": "straight-side-part",
     "name": "Classic side part",
     "length": "short",
@@ -662,7 +699,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-e736c561-42ea-4c15-9e8a-587d2d8493db.png"
       }
-    }
+    },
+    "presentations": [
+      "masculine"
+    ]
   },
   {
     "id": "straight-quiff",
@@ -713,7 +753,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-a06574a7-92a8-464e-8ae6-1d42110aefc4.png"
       }
-    }
+    },
+    "presentations": [
+      "masculine"
+    ]
   },
   {
     "id": "straight-lob",
@@ -763,7 +806,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-7f197e40-90a1-486a-87db-3cedafc857d6.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "wavy-taper",
@@ -814,7 +860,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-eb477268-6b0d-49e0-96fc-0d41b2a21e75.png"
       }
-    }
+    },
+    "presentations": [
+      "masculine"
+    ]
   },
   {
     "id": "wavy-shag",
@@ -866,7 +915,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-663b84e4-8712-4544-932d-a82a4f9def32.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "wavy-long-layers",
@@ -916,7 +968,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-4ca89fac-d468-4d69-8151-dd9d5256d43e.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "curly-crop",
@@ -967,7 +1022,11 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-1d1ae223-b2f1-462b-8af0-1bb256e28786.png"
       }
-    }
+    },
+    "presentations": [
+      "masculine",
+      "feminine"
+    ]
   },
   {
     "id": "curly-bob",
@@ -1018,7 +1077,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-e9fdda16-a5c7-4385-96a3-a93627d4ead8.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "curly-curtains",
@@ -1070,7 +1132,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-81cf5d60-babf-4b8c-a773-7caba53c09d9.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   },
   {
     "id": "coiled-close-crop",
@@ -1120,7 +1185,11 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-6eb19c7f-9e95-4e23-ad21-993fa10b0a6c.png"
       }
-    }
+    },
+    "presentations": [
+      "masculine",
+      "feminine"
+    ]
   },
   {
     "id": "coiled-high-top",
@@ -1171,7 +1240,10 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-0a0b0d9f-2966-4623-93d5-bd0adf985eef.png"
       }
-    }
+    },
+    "presentations": [
+      "masculine"
+    ]
   },
   {
     "id": "coiled-twists",
@@ -1221,6 +1293,9 @@ export const HAIRSTYLES: CatalogStyle[] = [
         "reviewedAt": "2026-10-18",
         "generationRecord": "exec-1537adc8-62a5-4095-b9c7-2016e0490745.png"
       }
-    }
+    },
+    "presentations": [
+      "feminine"
+    ]
   }
 ];

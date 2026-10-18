@@ -100,12 +100,15 @@ export interface Recommendation {
 
 export type HairTexture = 'straight' | 'wavy' | 'curly' | 'coiled';
 export type HairLength = 'short' | 'medium' | 'long';
+export type StylePresentation = 'masculine' | 'feminine';
 export interface StylingPreferences {
+  presentation?: StylePresentation | 'any';
   texture: HairTexture | 'any'; currentLength: HairLength | 'any'; desiredLength: HairLength | 'any';
   stylingTime: 'any' | '5' | '15' | '30'; preferredStyles: string[];
   facialHair: 'unknown' | 'yes' | 'no'; allowGrowOut: boolean; useGeometry: boolean;
 }
 export interface CatalogStyle extends Hairstyle {
+  presentations: StylePresentation[];
   length: HairLength; texture: HairTexture; maintenance: 'low' | 'medium' | 'high';
   dailyMinutes: number; tags: string[]; requirements: string; maintenanceNote: string; stylistBrief: string;
 }
@@ -113,5 +116,5 @@ export interface ReportCareChoices { concern:'general'|'sun'|'pigmentation'; jaw
 export interface FinalReportData {
   generatedAt:string; photoPreparedAt:string; analysis:FaceAnalysis;
   selectedStyles:Array<{style:CatalogStyle;reason:string}>;
-  care:ReportCareChoices; includePhoto:boolean; formatVersion:'5.0.0';
+  care:ReportCareChoices; includePhoto:boolean; includeTechnicalDetails?:boolean; formatVersion:'5.0.0' | '5.1.0';
 }

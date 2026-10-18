@@ -52,3 +52,7 @@ Phase 3 acceptance: pixel-space geometry with documented landmark indices, unava
 
 Phase 4 acceptance: preferences materially constrain/rank suggestions; unknown choices and all-style browsing work; at least 12 suitable references have verified usage records (target 24); filters, details, session favourites and three-style comparison work. Care content uses current authoritative sources with actual review dates and no appearance-based diagnosis. Keep source/credit metadata with recommendations for future exports. Stop before Phase 5. The current collection has 24 completed generated references; see HAIRSTYLE_CATALOG.md and BUILD_STATUS.md for actual verification and limits.
 
+
+## User-requested follow-up: style preferences and readability
+
+After the five phases and QA, add an explicit visitor-selected style-presentation preference without identity inference. Keep all existing practical constraints and all-style browsing. Simplify the report's standard reading path, retain actual measurements/unavailable outcomes, and make detailed formulas an optional appendix while always retaining compact method versions and sources. Photo inclusion stays off by default. This follow-up does not authorize diagnoses, attractiveness scores, guessing gender or fabricated results.

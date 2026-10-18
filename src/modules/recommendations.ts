@@ -4,14 +4,15 @@ import { HAIRSTYLES } from './hairstyleCatalog.ts';
 
 export const CATALOG_VERSION='4.0.0';
 
-export const DEFAULT_PREFERENCES:StylingPreferences={texture:'any',currentLength:'any',desiredLength:'any',stylingTime:'any',preferredStyles:[],facialHair:'unknown',allowGrowOut:false,useGeometry:true};
+export const DEFAULT_PREFERENCES:StylingPreferences={presentation:'any',texture:'any',currentLength:'any',desiredLength:'any',stylingTime:'any',preferredStyles:[],facialHair:'unknown',allowGrowOut:false,useGeometry:true};
 
 export const STYLE_TAGS=['crop','bob','layers','fringe','taper','volume'];
 
-export const MATCH_METHOD={name:'FaceFrame preferences-first styling rules',version:'4.0.0',sources:[]};
+export const MATCH_METHOD={name:'FaceFrame preferences-first styling rules',version:'4.1.0',sources:[]};
 
 const featured=['textured-crop','wavy-lob','curly-long-layers','rounded-coils','straight-bob'];
-const editorialOrder=(id:string)=>{const index=featured.indexOf(id);return index<0?featured.length:index;};
+const masculineFeatured=['textured-crop','straight-side-part','straight-quiff','wavy-taper','curly-taper','coiled-high-top'];
+const editorialOrder=(id:string,presentation?:string)=>{const order=presentation==='masculine'?masculineFeatured:featured;const index=order.indexOf(id);return index<0?order.length:index;};
 const lengths={short:1,medium:2,long:3};
 
 export function geometryContext(analysis?:FaceAnalysis):string {
@@ -32,11 +33,13 @@ export function rankStyles(catalog:CatalogStyle[],preferences:StylingPreferences
 
   const metric=(id:string)=>{const m=analysis?.measurements.status==='ready'?analysis.measurements.value.find(m=>m.id===id)?.value:undefined;return m?.status==='ready'&&Number.isFinite(m.value)?m.value:undefined;};
 
-  return catalog.filter(s=>s.referenceImage.status==='ready'&&(p.texture==='any'||s.texture===p.texture)&&(p.desiredLength==='any'||s.length===p.desiredLength)&&(p.stylingTime==='any'||s.dailyMinutes<=Number(p.stylingTime))&&(!p.preferredStyles.length||p.preferredStyles.some(tag=>s.tags.includes(tag)))&&(p.currentLength==='any'||p.allowGrowOut||lengths[s.length]<=lengths[p.currentLength])).map(style=>{
+  return catalog.filter(s=>s.referenceImage.status==='ready'&&(!p.presentation||p.presentation==='any'||s.presentations.includes(p.presentation))&&(p.texture==='any'||s.texture===p.texture)&&(p.desiredLength==='any'||s.length===p.desiredLength)&&(p.stylingTime==='any'||s.dailyMinutes<=Number(p.stylingTime))&&(!p.preferredStyles.length||p.preferredStyles.some(tag=>s.tags.includes(tag)))&&(p.currentLength==='any'||p.allowGrowOut||lengths[s.length]<=lengths[p.currentLength])).map(style=>{
 
     let priority=p.currentLength===style.length?20:0;
 
     const reasons=[p.texture==='any'?`Reference texture: ${style.texture==='coiled'?'tightly coiled':style.texture}.`:`Matches your ${p.texture==='coiled'?'tightly coiled':p.texture} texture choice.`,p.desiredLength==='any'?`${style.length} length option.`:`Matches your desired ${style.length} length.`,`About ${style.dailyMinutes} minutes of daily styling is a planning estimate; your routine may vary.`];
+
+    if(p.presentation&&p.presentation!=='any')reasons.unshift(`Matches your chosen ${p.presentation} style presentation.`);
 
     if(p.preferredStyles.length)reasons.push(`Matches preferred style: ${style.tags.filter(t=>p.preferredStyles.includes(t)).join(', ')}.`);
 
@@ -50,7 +53,7 @@ export function rankStyles(catalog:CatalogStyle[],preferences:StylingPreferences
 
     return {style,reasons,priority};
 
-  }).sort((a,b)=>b.priority-a.priority||editorialOrder(a.style.id)-editorialOrder(b.style.id)||a.style.id.localeCompare(b.style.id)).map(({style,reasons})=>({style,reasons}));
+  }).sort((a,b)=>b.priority-a.priority||editorialOrder(a.style.id,p.presentation)-editorialOrder(b.style.id,p.presentation)||a.style.id.localeCompare(b.style.id)).map(({style,reasons})=>({style,reasons}));
 
 }
 

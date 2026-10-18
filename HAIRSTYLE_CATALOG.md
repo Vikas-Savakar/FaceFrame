@@ -38,3 +38,7 @@ FaceAnalysis.styling stores preferences, Recommendation records, catalog version
 3. Add one typed CatalogStyle in src/modules/hairstyleCatalog.ts, including a complete referenceImage record, practical tags, requirements, maintenance and stylist brief. Use unavailable status if image rights or suitability are unresolved; never count it complete.
 4. Add the matching credits.json record and a hash/byte manifest entry. Keep generated modifications/creation records truthful. No blanket CC or stock-license claim.
 5. Run npm test and npm run build; update coverage and review dates. Tests compare catalog credits to the rights record and check every texture/length group. Build verifies each bundled PNG hash.
+
+## Explicit reference presentation (1.1.0)
+
+Each CatalogStyle now carries an editorial `presentations` list (masculine/feminine, sometimes both). This describes how the cut/reference is grouped, not a detected gender or a restriction on wearers. Matching method 4.1.0 applies the visitor's choice before practical/geometry ranking; absent/any retains all 24. Masculine tie order starts with crop, side part, quiff, wavy taper and curly taper. Masculine medium/long coverage is currently missing and disclosed rather than filled with other references. No images, licenses or original rights records changed. Default report favourites must meet current preferences; explicit selections retain their full credits.

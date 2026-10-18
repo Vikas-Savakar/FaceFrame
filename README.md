@@ -1,4 +1,4 @@
-# FaceFrame — Phase 5 + post-build QA (1.0.1)
+# FaceFrame — preference and report improvements (1.1.0)
 
 A React/Vite/TypeScript website with real browser-local still-image landmark detection, traceable apparent proportions, provisional shape descriptions, an annotated contour and an optional estimated mesh. The existing design and contracts are retained. There are 24 locally bundled generated hairstyle references, practical preferences, session favourites/comparison and sourced general care. Phase 5 adds local print/PDF and annotated PNG exports, photo exclusion by default, full-session reset and deployment preparation. No live deployment is claimed.
 
@@ -66,7 +66,7 @@ Runtime requests retrieve only same-origin application files, the worker, hairst
 
 ## Developer verification tools
 
-`npm test` runs 31 metadata, quality, geometry, topology, visibility, shape-rule, catalog/provenance, preference-matching and export/privacy/resource tests. With `npm run dev`, open `/tests/browser.html` for decode/orientation/limit checks, the preview-recovery regression and a test-injected GPU failure followed by real CPU initialization. `tests/camera-fixture.ts` provides controlled streams/errors; it is not imported by the app. Tests are not part of the production entry and no test photos are shipped. Test code never substitutes landmark results.
+`npm test` runs 34 metadata, quality, geometry, topology, visibility, shape-rule, catalog/provenance, preference-matching and export/privacy/resource tests. With `npm run dev`, open `/tests/browser.html` for decode/orientation/limit checks, the preview-recovery regression and a test-injected GPU failure followed by real CPU initialization. `tests/camera-fixture.ts` provides controlled streams/errors; it is not imported by the app. Tests are not part of the production entry and no test photos are shipped. Test code never substitutes landmark results.
 
 See BROWSER_COMPATIBILITY.md for the API review, actual browser/device coverage and remaining release checks. HTTPS is required for public deployment and secure photo-ID/camera APIs; missing secure UUID support now gives a readable message. Camera/worker cleanup also handles page-history suspension, and PNG canvas size is bounded for mobile memory/dimension limits. No detector, geometry/shape rules or quality thresholds were changed by this QA pass.
 
@@ -124,3 +124,9 @@ Open http://127.0.0.1:4173/faceframe/. A separate `/faceframe/` production build
 
 After publishing, open the actual HTTPS/base URL. Confirm worker/model/WASM/images load, upload a permission-cleared photo, inspect alignment/geometry, change preferences, save photo-free PDF/PNG, test photo opt-in/out and reset during analysis. Test camera start/capture/close on target hardware. Confirm only public static downloads and no photo/report network payloads. Inspect A4/Letter and target browsers/devices before claiming those deployment checks. No live-host validation has been performed here.
 
+
+## Style presentation and readable reports (1.1.0)
+
+In Hairstyles, choose Style presentation → Masculine styles, Feminine styles, or All styles/no preference. Presentation is a visitor choice, never inferred from the photo. These editorial reference groups do not restrict who may wear a cut. The current masculine collection focuses on short styles; unavailable combinations return fewer matches instead of unrelated references. Texture and desired length remain strong constraints. Show all styles explicitly bypasses preferences. Preferences remain session-only.
+
+Report starts with an at-a-glance explanation. Review visibility to enable shape guidance; the app never fills an unconfirmed category. The standard print report uses readable labels, a compact method record, sources and full image credits. Enable the optional technical appendix for formulas, indices, thresholds and detailed limitations. Original photo still defaults off independently. Automatic report selection excludes favourites outside current preferences; you can still explicitly select those favourites. Changing preferences reinitializes export choices with photo inclusion off. Calculation algorithms and the model are unchanged.

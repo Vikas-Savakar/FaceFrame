@@ -1,10 +1,11 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import type {FaceAnalysis,LandmarkFrame,PhotoAsset} from '../src/contracts.ts';
-import {renderReport,structureDrawing} from '../src/modules/reportRendering.ts';
+import {defaultReportStyles,renderReport,structureDrawing} from '../src/modules/reportRendering.ts';
 import {resolveAssetPath} from '../src/modules/assets.ts';
 import {LocalDownloads,renderStructureImage,structureImageLayout} from '../src/modules/structureExport.ts';
 import {referencePreview} from '../src/modules/referencePreview.ts';
+import {reportTakeaways,readableMeasurement} from '../src/modules/reportSummary.ts';
 import {HAIRSTYLES} from '../src/modules/hairstyleCatalog.ts';
 // Known developer geometry only; never imported into the production application.
 function fixture():FaceAnalysis{
@@ -48,4 +49,19 @@ test('abort clears export canvas before a pending encoder callback returns',asyn
  const controller=new AbortController(),pending=renderStructureImage(fixture(),undefined,controller.signal),rejection=assert.rejects(pending,{name:'AbortError'});
  try{controller.abort();await Promise.resolve();await Promise.resolve();assert.equal(canvas.width,0,'Reset must clear the canvas without waiting for encoding');}
  finally{complete(new Blob(['late controlled encoder result']));await rejection;if(original)Object.defineProperty(globalThis,'document',original);else Reflect.deleteProperty(globalThis,'document');}
+});
+
+test('report auto-selection excludes favourites outside current presentation preferences',()=>{
+ const a=fixture();a.styling={preferences:{presentation:'masculine',texture:'any',currentLength:'any',desiredLength:'any',stylingTime:'any',preferredStyles:[],facialHair:'unknown',allowGrowOut:false,useGeometry:false},recommendations:[],catalogVersion:'4.0.0',imageCredits:[]};
+ assert.deepEqual(defaultReportStyles(a,['straight-bob','wavy-lob'],HAIRSTYLES),[]);
+ assert.deepEqual(defaultReportStyles(a,['straight-bob','textured-crop','textured-crop'],HAIRSTYLES),['textured-crop']);
+ const regular=renderReport(a,options),detailed=renderReport(a,{...options,includeTechnicalDetails:true});
+ assert.ok(regular.status==='ready'&&!regular.value.includeTechnicalDetails&&!regular.value.includePhoto);
+ assert.ok(detailed.status==='ready'&&detailed.value.includeTechnicalDetails&&!detailed.value.includePhoto);
+});
+
+test('plain-language report uses actual values and never fills missing or obstructed measurements',()=>{
+ const a=fixture();const copy=reportTakeaways(a).join(' ');assert.match(copy,/2.67 times/);assert.match(copy,/visibility review/);assert.doesNotMatch(copy,/perfect|ideal ratio/);
+ if(a.measurements.status==='ready'){const m=a.measurements.value[0];m.value={status:'unavailable',reason:{code:'obstructed',message:'Hidden by hair'}};assert.equal(readableMeasurement(m).text,'Hidden by hair');assert.doesNotMatch(reportTakeaways(a).join(' '),/2.67/);}
+ assert.match(reportTakeaways({...a,measurements:{status:'empty'}}).join(' '),/visibility review/);
 });
