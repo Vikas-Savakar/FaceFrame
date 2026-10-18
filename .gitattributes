@@ -1,0 +1,2 @@
+# Preserve checked-in bytes across Windows/macOS/Linux, including hash-verified runtimes.
+* -text
