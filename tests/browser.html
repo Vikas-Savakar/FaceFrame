@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>FaceFrame developer checks</title><body><h1>FaceFrame browser checks</h1><p>Developer-only synthetic fixtures. No visitor photo is used.</p><button id="prepare">Run image preparation checks</button><button id="fallback">Run GPU-to-CPU fallback check</button><output id="result" style="display:block;white-space:pre-wrap"></output><script type="module">
+import { preparationChecks, fallbackCheck, previewRecoveryCheck } from './browser-checks.ts';
+const recovery=document.createElement('button');recovery.id='recovery';recovery.textContent='Run preview recovery regression';document.querySelector('output').before(recovery);
+const output=document.querySelector('#result');
+for(const [id,run] of [['prepare',preparationChecks],['fallback',fallbackCheck],['recovery',previewRecoveryCheck]]) document.querySelector('#'+id).onclick=async()=>{output.textContent='Running…';try{output.textContent='PASS\n'+JSON.stringify(await run(),null,2);}catch(error){output.textContent='FAIL\n'+error.message;}};
+</script></body></html>

@@ -1,0 +1,797 @@
+{
+  "reviewedAt": "2026-10-18",
+  "records": [
+    {
+      "id": "textured-crop",
+      "name": "Textured crop",
+      "image": {
+        "url": "/hairstyles/textured-crop.png",
+        "alt": "Generated reference of a fictional adult: Short choppy top and textured fringe with tapered sides.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-textured-crop",
+          "title": "Original generated Textured crop reference",
+          "url": "/hairstyles/textured-crop.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-f44ac0e6-274e-4e18-9b61-379101c6e508.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Short choppy top and textured fringe with tapered sides."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "straight-bob",
+      "name": "Straight bob",
+      "image": {
+        "url": "/hairstyles/straight-bob.png",
+        "alt": "Generated reference of a fictional adult: Chin-length blunt perimeter with an off-center part.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-straight-bob",
+          "title": "Original generated Straight bob reference",
+          "url": "/hairstyles/straight-bob.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-23507a37-7615-47f4-bf46-f3467c4ef2f9.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Chin-length blunt perimeter with an off-center part."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "straight-long-layers",
+      "name": "Long straight layers",
+      "image": {
+        "url": "/hairstyles/straight-long-layers.png",
+        "alt": "Generated reference of a fictional adult: Below-shoulder straight hair with long face-framing layers.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-straight-long-layers",
+          "title": "Original generated Long straight layers reference",
+          "url": "/hairstyles/straight-long-layers.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-d5a90a37-5add-4955-9f69-2643a324971b.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Below-shoulder straight hair with long face-framing layers."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "wavy-pixie",
+      "name": "Wavy pixie",
+      "image": {
+        "url": "/hairstyles/wavy-pixie.png",
+        "alt": "Generated reference of a fictional adult: Short wavy cut with a side-swept front and cropped nape.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-wavy-pixie",
+          "title": "Original generated Wavy pixie reference",
+          "url": "/hairstyles/wavy-pixie.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-b3468f58-3f5f-492e-94af-485a5555af26.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Short wavy cut with a side-swept front and cropped nape."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "wavy-lob",
+      "name": "Wavy lob",
+      "image": {
+        "url": "/hairstyles/wavy-lob.png",
+        "alt": "Generated reference of a fictional adult: Shoulder-grazing long bob with loose waves and airy ends.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-wavy-lob",
+          "title": "Original generated Wavy lob reference",
+          "url": "/hairstyles/wavy-lob.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-5afc6330-f432-41fd-99e9-fab22897f79d.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Shoulder-grazing long bob with loose waves and airy ends."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "wavy-curtains",
+      "name": "Long waves with curtain fringe",
+      "image": {
+        "url": "/hairstyles/wavy-curtains.png",
+        "alt": "Generated reference of a fictional adult: Long waves with center-parted curtain pieces framing the cheeks.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-wavy-curtains",
+          "title": "Original generated Long waves with curtain fringe reference",
+          "url": "/hairstyles/wavy-curtains.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-c4aa8806-fc98-4ff2-8bed-cf791c2588a3.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Long waves with center-parted curtain pieces framing the cheeks."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "curly-taper",
+      "name": "Curly taper",
+      "image": {
+        "url": "/hairstyles/curly-taper.png",
+        "alt": "Generated reference of a fictional adult: Springy curls on top with gradually shorter sides.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-curly-taper",
+          "title": "Original generated Curly taper reference",
+          "url": "/hairstyles/curly-taper.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-2b7a36bb-31d4-4730-a78a-a0d8058954c5.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Springy curls on top with gradually shorter sides."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "curly-shag",
+      "name": "Curly shag",
+      "image": {
+        "url": "/hairstyles/curly-shag.png",
+        "alt": "Generated reference of a fictional adult: Layered springy curls and a curly fringe around an ear-to-shoulder outline.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-curly-shag",
+          "title": "Original generated Curly shag reference",
+          "url": "/hairstyles/curly-shag.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-404258c0-2029-40e7-b866-5c941d6d4925.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Layered springy curls and a curly fringe around an ear-to-shoulder outline."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "curly-long-layers",
+      "name": "Long curly layers",
+      "image": {
+        "url": "/hairstyles/curly-long-layers.png",
+        "alt": "Generated reference of a fictional adult: Below-shoulder ringlets with a rounded long-layer outline.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-curly-long-layers",
+          "title": "Original generated Long curly layers reference",
+          "url": "/hairstyles/curly-long-layers.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-082bf5e1-b521-49e7-88e3-0aa683dffcdb.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Below-shoulder ringlets with a rounded long-layer outline."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "coiled-taper",
+      "name": "Coiled taper",
+      "image": {
+        "url": "/hairstyles/coiled-taper.png",
+        "alt": "Generated reference of a fictional adult: Small dense coils over a softly tapered side and nape outline.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-coiled-taper",
+          "title": "Original generated Coiled taper reference",
+          "url": "/hairstyles/coiled-taper.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-ad8c6865-e4d6-45f8-afd0-e5ce2c833461.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Small dense coils over a softly tapered side and nape outline."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "rounded-coils",
+      "name": "Rounded coils",
+      "image": {
+        "url": "/hairstyles/rounded-coils.png",
+        "alt": "Generated reference of a fictional adult: Dense natural coils forming a rounded silhouette around the head.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-rounded-coils",
+          "title": "Original generated Rounded coils reference",
+          "url": "/hairstyles/rounded-coils.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-3e200db0-192b-45e8-9104-28c81d9a2dfd.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Dense natural coils forming a rounded silhouette around the head."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "long-coils",
+      "name": "Long coil layers",
+      "image": {
+        "url": "/hairstyles/long-coils.png",
+        "alt": "Generated reference of a fictional adult: Long small spiral coils with a full layered outline below the shoulders.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-long-coils",
+          "title": "Original generated Long coil layers reference",
+          "url": "/hairstyles/long-coils.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-e4178564-ed92-4cc9-a574-fbdcafaf1a7f.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Long small spiral coils with a full layered outline below the shoulders."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "straight-side-part",
+      "name": "Classic side part",
+      "image": {
+        "url": "/hairstyles/straight-side-part.png",
+        "alt": "Generated reference of a fictional adult: Neatly combed straight top with a visible side part and tapered sides.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-straight-side-part",
+          "title": "Original generated Classic side part reference",
+          "url": "/hairstyles/straight-side-part.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-e736c561-42ea-4c15-9e8a-587d2d8493db.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Neatly combed straight top with a visible side part and tapered sides."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "straight-quiff",
+      "name": "Quiff",
+      "image": {
+        "url": "/hairstyles/straight-quiff.png",
+        "alt": "Generated reference of a fictional adult: Lifted swept-up front with a short tapered outline.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-straight-quiff",
+          "title": "Original generated Quiff reference",
+          "url": "/hairstyles/straight-quiff.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-a06574a7-92a8-464e-8ae6-1d42110aefc4.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Lifted swept-up front with a short tapered outline."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "straight-lob",
+      "name": "Straight lob",
+      "image": {
+        "url": "/hairstyles/straight-lob.png",
+        "alt": "Generated reference of a fictional adult: Long bob with a center part and a blunt collarbone-level perimeter.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-straight-lob",
+          "title": "Original generated Straight lob reference",
+          "url": "/hairstyles/straight-lob.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-7f197e40-90a1-486a-87db-3cedafc857d6.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Long bob with a center part and a blunt collarbone-level perimeter."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "wavy-taper",
+      "name": "Wavy taper",
+      "image": {
+        "url": "/hairstyles/wavy-taper.png",
+        "alt": "Generated reference of a fictional adult: Loose waves over the top and smoothly tapered sides.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-wavy-taper",
+          "title": "Original generated Wavy taper reference",
+          "url": "/hairstyles/wavy-taper.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-eb477268-6b0d-49e0-96fc-0d41b2a21e75.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Loose waves over the top and smoothly tapered sides."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "wavy-shag",
+      "name": "Wavy shag",
+      "image": {
+        "url": "/hairstyles/wavy-shag.png",
+        "alt": "Generated reference of a fictional adult: Shoulder-length layered waves with a piecey brow fringe.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-wavy-shag",
+          "title": "Original generated Wavy shag reference",
+          "url": "/hairstyles/wavy-shag.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-663b84e4-8712-4544-932d-a82a4f9def32.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Shoulder-length layered waves with a piecey brow fringe."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "wavy-long-layers",
+      "name": "Long wavy layers",
+      "image": {
+        "url": "/hairstyles/wavy-long-layers.png",
+        "alt": "Generated reference of a fictional adult: Long loose waves with face-framing layers and no short fringe.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-wavy-long-layers",
+          "title": "Original generated Long wavy layers reference",
+          "url": "/hairstyles/wavy-long-layers.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-4ca89fac-d468-4d69-8151-dd9d5256d43e.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Long loose waves with face-framing layers and no short fringe."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "curly-crop",
+      "name": "Curly crop",
+      "image": {
+        "url": "/hairstyles/curly-crop.png",
+        "alt": "Generated reference of a fictional adult: Compact springy curls forming a short rounded crop and fringe.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-curly-crop",
+          "title": "Original generated Curly crop reference",
+          "url": "/hairstyles/curly-crop.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-1d1ae223-b2f1-462b-8af0-1bb256e28786.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Compact springy curls forming a short rounded crop and fringe."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "curly-bob",
+      "name": "Curly bob",
+      "image": {
+        "url": "/hairstyles/curly-bob.png",
+        "alt": "Generated reference of a fictional adult: Chin-to-neck ringlets forming a rounded bob perimeter.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-curly-bob",
+          "title": "Original generated Curly bob reference",
+          "url": "/hairstyles/curly-bob.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-e9fdda16-a5c7-4385-96a3-a93627d4ead8.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Chin-to-neck ringlets forming a rounded bob perimeter."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "curly-curtains",
+      "name": "Long curls with curtain fringe",
+      "image": {
+        "url": "/hairstyles/curly-curtains.png",
+        "alt": "Generated reference of a fictional adult: Long ringlets with parted curly fringe and cheek-framing pieces.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-curly-curtains",
+          "title": "Original generated Long curls with curtain fringe reference",
+          "url": "/hairstyles/curly-curtains.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-81cf5d60-babf-4b8c-a773-7caba53c09d9.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Long ringlets with parted curly fringe and cheek-framing pieces."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "coiled-close-crop",
+      "name": "Close coil crop",
+      "image": {
+        "url": "/hairstyles/coiled-close-crop.png",
+        "alt": "Generated reference of a fictional adult: Dense small coils in an even close natural crop.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-coiled-close-crop",
+          "title": "Original generated Close coil crop reference",
+          "url": "/hairstyles/coiled-close-crop.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-6eb19c7f-9e95-4e23-ad21-993fa10b0a6c.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Dense small coils in an even close natural crop."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "coiled-high-top",
+      "name": "Coiled high-top taper",
+      "image": {
+        "url": "/hairstyles/coiled-high-top.png",
+        "alt": "Generated reference of a fictional adult: Tightly coiled high top with a softly squared outline and tapered sides.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-coiled-high-top",
+          "title": "Original generated Coiled high-top taper reference",
+          "url": "/hairstyles/coiled-high-top.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-0a0b0d9f-2966-4623-93d5-bd0adf985eef.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Tightly coiled high top with a softly squared outline and tapered sides."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    },
+    {
+      "id": "coiled-twists",
+      "name": "Long two-strand twists",
+      "image": {
+        "url": "/hairstyles/coiled-twists.png",
+        "alt": "Generated reference of a fictional adult: Long individual two-strand twists with coiled root texture and curled ends.",
+        "creator": "FaceFrame, generated with OpenAI imagegen",
+        "license": {
+          "name": "Generated output under OpenAI Terms of Use (not a stock/CC license)",
+          "url": "https://openai.com/policies/terms-of-use/",
+          "attribution": "Generated hairstyle reference · FaceFrame / OpenAI imagegen"
+        },
+        "source": {
+          "id": "generated-coiled-twists",
+          "title": "Original generated Long two-strand twists reference",
+          "url": "/hairstyles/coiled-twists.png",
+          "publisher": "FaceFrame",
+          "accessedAt": "2026-10-18"
+        },
+        "generated": true,
+        "modifications": "None; original PNG copied byte-for-byte. Responsive display only.",
+        "reviewedAt": "2026-10-18",
+        "generationRecord": "exec-1537adc8-62a5-4095-b9c7-2016e0490745.png"
+      },
+      "visualReview": {
+        "date": "2026-10-18",
+        "reviewer": "Codex visual inspection",
+        "accepted": true,
+        "note": "Long individual two-strand twists with coiled root texture and curled ends."
+      },
+      "permissionBasis": "Generated specifically for this project. OpenAI Terms of Use, Content section: output assignment to the user as between OpenAI and user, to extent permitted by law. No stock-photo or Creative Commons license claimed.",
+      "creditPolicy": "Retain generated-example label and the recorded FaceFrame / OpenAI credit in the app and future exports."
+    }
+  ]
+}

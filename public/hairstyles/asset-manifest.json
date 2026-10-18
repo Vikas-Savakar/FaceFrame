@@ -1,0 +1,126 @@
+{
+  "version": "4.0.0",
+  "reviewedAt": "2026-10-18",
+  "files": [
+    {
+      "path": "coiled-close-crop.png",
+      "bytes": 2320174,
+      "sha256": "8487e6d243edc4efffbd47dfea56efe6dc2728100d64dd28916360b259fb7a38"
+    },
+    {
+      "path": "coiled-high-top.png",
+      "bytes": 2355992,
+      "sha256": "20c9a78cc8840e1a19fc28ffebd17797f7af6fc6842bda00dce076db40fad7b3"
+    },
+    {
+      "path": "coiled-taper.png",
+      "bytes": 2385714,
+      "sha256": "a86f15833a8dc34c902bb1e65da7170a298f511bd8fc587efaa1f69842dc5cc7"
+    },
+    {
+      "path": "coiled-twists.png",
+      "bytes": 2407010,
+      "sha256": "320ddd07f4d77e02a8d4e9d53c2ed9ea673c527b7e3876c4b2fed5a9aedeeb68"
+    },
+    {
+      "path": "curly-bob.png",
+      "bytes": 2414897,
+      "sha256": "5aea393d95d18bfa2a1c5d5000d8bb4ac4a089f030b395eca34ed61f5d9d3afc"
+    },
+    {
+      "path": "curly-crop.png",
+      "bytes": 2371372,
+      "sha256": "f1c12503fa5d0c4851ed54c167b9a14318b6ba889c6116241739ee9234ca8a16"
+    },
+    {
+      "path": "curly-curtains.png",
+      "bytes": 2455391,
+      "sha256": "9c38b2bac1ac1b0e322692ba15e3d57c9ada722503f5d83956e65e5a046149c0"
+    },
+    {
+      "path": "curly-long-layers.png",
+      "bytes": 2366179,
+      "sha256": "72d7cd09236f0ca9e4358f69453301f62ff5adff00d33c58cf92cbfc334f3b4f"
+    },
+    {
+      "path": "curly-shag.png",
+      "bytes": 2428659,
+      "sha256": "96e660510780bb341a0715b2df0f2ec9b525e1a5b2b23850726f3e81d6e30d89"
+    },
+    {
+      "path": "curly-taper.png",
+      "bytes": 2124618,
+      "sha256": "7aeb366ec64697651c54968dc41204c357f73ed8dc5469b094913f0177bb2ed2"
+    },
+    {
+      "path": "long-coils.png",
+      "bytes": 2515707,
+      "sha256": "cf777c59075966c9d6b27835afebc6abbc70b3fa8f67df79e9fbfcd13f7e32e2"
+    },
+    {
+      "path": "rounded-coils.png",
+      "bytes": 2510404,
+      "sha256": "89b69783fad5f78f7e645e9babe7daaa9818895619d02d20b0a3eeba1df71bdb"
+    },
+    {
+      "path": "straight-bob.png",
+      "bytes": 2253272,
+      "sha256": "6883a7ecfac7aa7e7c4b6739e05ab087e1ba7d80535c53efd60788221297cc57"
+    },
+    {
+      "path": "straight-lob.png",
+      "bytes": 2157754,
+      "sha256": "4001cf61ccd8d814cb3b6877635d0123c829156c697a28aed853da0bc4dff33c"
+    },
+    {
+      "path": "straight-long-layers.png",
+      "bytes": 2157687,
+      "sha256": "f12aaecb354525ff47b27602a593bfebdca761ec664ffbc3faba220c59f747de"
+    },
+    {
+      "path": "straight-quiff.png",
+      "bytes": 2098219,
+      "sha256": "38055f36f1f81521300d743103ceaf824a2ded3644d1134d1fede6ccbaf0eb3d"
+    },
+    {
+      "path": "straight-side-part.png",
+      "bytes": 2270979,
+      "sha256": "ce3a3235c0bc2087f4280a4211e07e4ad87efa391c8f65447b1b8b02241e8ebe"
+    },
+    {
+      "path": "textured-crop.png",
+      "bytes": 2189464,
+      "sha256": "9525d354c0fb9dc4b02b43e72abaf881991fa3c07e3e210e4a8940b6fe50973f"
+    },
+    {
+      "path": "wavy-curtains.png",
+      "bytes": 2393400,
+      "sha256": "30827c390f38bb727e83bb99ab00bea460b966e9af07f423898e9b62b0bbb372"
+    },
+    {
+      "path": "wavy-lob.png",
+      "bytes": 2410771,
+      "sha256": "5c26fd414d09032614ec1a240206f76ca605878acf4f63155a928e64380e4dab"
+    },
+    {
+      "path": "wavy-long-layers.png",
+      "bytes": 2425548,
+      "sha256": "c0640dfb2dcfab33b3ba361b6f2c95d4766f2e2ff925330da3c814d1981c5611"
+    },
+    {
+      "path": "wavy-pixie.png",
+      "bytes": 2185206,
+      "sha256": "cb6b87bb16d6f763df5dcc37dea288c9cbc5dfefb1db7cb07ca1c63187bb05cf"
+    },
+    {
+      "path": "wavy-shag.png",
+      "bytes": 2515813,
+      "sha256": "3cdb4df4cc662231aa22193e6ac193b44fe404b68530e2694e22c02830ac4735"
+    },
+    {
+      "path": "wavy-taper.png",
+      "bytes": 2273122,
+      "sha256": "c1a73fb6fcd049d125953add633083d916cf1b031301445ac6d44757f00c4a5c"
+    }
+  ]
+}
