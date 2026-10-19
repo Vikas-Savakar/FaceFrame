@@ -1,0 +1,403 @@
+/* Visual layer for the existing application. Deliberately excluded from printing.
+   Original CSS implementation inspired by 21st.dev interaction patterns. */
+@media screen {
+  :root { background: #0c1016; }
+  body { background: #0c1016; }
+  #root {
+    --paper: #0c1016;
+    --ink: #f0f3f5;
+    --muted: #a4afbd;
+    --border: #2b3441;
+    --green: #c4f995;
+    --accent: #c4f995;
+    --cream: #171e28;
+    color: var(--ink);
+    font: 15px/1.65 'Segoe UI', Arial, sans-serif;
+    color-scheme: dark;
+  }
+  #root ::selection { background: #c4f995; color: #10180b; }
+  #root :focus-visible { outline: 3px solid #c4f995 !important; outline-offset: 5px; }
+  #root h1, #root h2, #root h3, #root h4 { color: #f0f3f5; font-family: 'Segoe UI', Arial, sans-serif; }
+  #root h1 { font-weight: 700; letter-spacing: -2.8px; }
+  #root h2 { font-weight: 650; letter-spacing: -.7px; }
+  #root h3 { font-weight: 600; }
+  #root h1 em { font-weight: inherit; }
+  #root input { accent-color: #c4f995; }
+  #root a, #root button, #root summary { -webkit-tap-highlight-color: transparent; }
+  #root summary { cursor: pointer; }
+  #root main { max-width: 1240px; padding: 0 36px; }
+  #root .app-shell { overflow: clip; background: radial-gradient(ellipse at 65% 0, #23332c44, transparent 32%), #0c1016; }
+  #root .site-header {
+    max-width: none; min-height: 82px; gap: 24px;
+    padding: 15px max(36px, calc((100vw - 1168px)/2));
+    border-color: #ffffff10; background: #0c1016ef; backdrop-filter: blur(18px);
+  }
+  #root .brand { font-size: 27px; font-weight: 700; color: #f0f3f5; letter-spacing: -1.2px; }
+  #root .brand svg, #root .brand-dot { color: #c4f995; }
+  #root .site-header nav { gap: 2px; padding: 4px; background: #ffffff04; border: 1px solid #ffffff08; border-radius: 30px; }
+  #root .site-header nav button { border-radius: 22px; color: #a8b2bf; padding: 9px 14px; transition: color .2s, background .2s; }
+  #root .site-header nav button:hover { color: white; background: #ffffff08; }
+  #root .site-header nav button[aria-current=page] { color: #e8f6dc; background: #28342b; }
+  #root .site-header nav button[aria-current]:after { display: none; }
+  #root .button {
+    position: relative; isolation: isolate; overflow: hidden; min-height: 48px;
+    color: #15200e; background: #c4f995; border: 1px solid #c4f995;
+    border-radius: 14px; font-size: 14px; font-weight: 650;
+    padding: 13px 22px; box-shadow: inset 0 1px 0 #ffffff50, 0 4px 18px #a2ef7012;
+    transition: transform .2s ease, box-shadow .2s ease, background .2s, border-color .2s;
+  }
+  #root .button::after { content: ''; pointer-events: none; position: absolute; inset: -50% auto -50% -60%; width: 35%; background: linear-gradient(90deg, transparent, #ffffff60, transparent); transform: skewX(-20deg) translateX(-100%); }
+  #root .button.secondary { color: #e5ebf1; background: #1b222d; border-color: #35414e; box-shadow: inset 0 1px 0 #ffffff08; }
+  #root .button:disabled { opacity: .5; cursor: not-allowed; transform: none; box-shadow: none; }
+  #root .button[aria-pressed=true] { color: #d4ffae; background: #2c3c29; border-color: #95bd74; }
+  #root .text-link { color: #c4f995; font-size: 13px; gap: 8px; }
+  #root .text-link:hover { color: #e1ffc4; }
+  #root .header-report { font-size: 12px; padding: 11px 17px; min-height: 44px; white-space: nowrap; border-radius: 12px; }
+  #root .header-short { display: none; }
+  #root .menu-toggle { color: #e6ebf2; border: 1px solid #35414e; background: #1b222d; border-radius: 10px; }
+  #root .eyebrow { color: #a8b8ad; font-size: 10px; font-weight: 650; letter-spacing: 2px; }
+  #root .journey { border-color: #ffffff0d; padding: 16px 0; gap: 28px; }
+  #root .journey button { color: #a0abba; font-size: 12px; gap: 10px; }
+  #root .journey button > span { background: #161e28; border-color: #35414e; color: #b6c1ce; }
+  #root .journey button[aria-current=step] { color: #d7fac0; }
+  #root .journey button[aria-current=step] > span { background: #c4f995; border-color: #c4f995; color: #13200e; box-shadow: 0 0 18px #c4f99519; }
+  #root .journey-privacy { color: #a8b5a5; }
+  #root .refined-hero { grid-template-columns: 1.12fr 1fr; gap: 50px; padding: 36px 0 42px; align-items: center; }
+  #root .refined-hero h1 { font-size: clamp(48px, 6vw, 80px); letter-spacing: -4px; line-height: 1.02; margin: 21px 0; position: relative; width: fit-content; }
+  #root .refined-hero h1 em { color: #c4f995; font-style: normal; }
+  #root .hero-spark { position: absolute; right: -52px; top: 3px; font-size: 40px; color: #b5a1ff; transform: rotate(-12deg); }
+  #root .hero-description { max-width: 440px; font-size: 16px; color: #aeb9c7; line-height: 1.8; margin: 18px 0 0; }
+  #root .hero-actions { display: flex; gap: 12px; margin-top: 27px; flex-wrap: wrap; }
+  #root .hero-actions .button { min-height: 52px; gap: 25px; }
+  #root .hero-actions .button span { font-size: 19px; }
+  #root .hero-trust { color: #a2afbd; font-size: 11px; margin-top: 22px; gap: 20px; flex-wrap: wrap; }
+  #root .status-dot { background: #c4f995; box-shadow: 0 0 14px #c4f99566; }
+  #root .visual-scene {
+    position: relative; isolation: isolate; min-width: 0; height: 380px; margin: 0;
+    overflow: hidden; border: 1px solid #3b4b4e; border-radius: 28px;
+    background: radial-gradient(ellipse at 50% 85%, #7164b127, transparent 65%), linear-gradient(140deg, #1b2a2a, #111721 60%);
+    box-shadow: inset 0 1px 0 #ffffff0d, 0 25px 80px #00000025;
+  }
+  #root .visual-scene::before { content: ''; position: absolute; inset: 0; z-index: -1; background-image: linear-gradient(#d9f7e807 1px, transparent 1px), linear-gradient(90deg, #d9f7e807 1px, transparent 1px); background-size: 28px 28px; mask-image: radial-gradient(ellipse, black 20%, transparent 80%); }
+  #root .visual-scene::after { content: ''; position: absolute; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, #9ee69226, transparent 70%); top: -40px; right: -40px; z-index: -1; animation: aura-drift 12s ease-in-out infinite alternate; }
+  #root .scene-topline { position: absolute; inset: 21px 22px auto; display: flex; justify-content: space-between; font-size: 9px; letter-spacing: 1.6px; color: #bdcdca; }
+  #root .scene-topline i { display: inline-block; width: 5px; height: 5px; background: #c4f995; border-radius: 50%; margin-right: 6px; }
+  #root .scene-face { position: absolute; width: 270px; height: 300px; top: 36px; left: calc(50% - 135px); animation: face-float 7s ease-in-out infinite; }
+  #root .frame-artwork { display: block; width: 100%; height: 100%; }
+  #root .scene-orbit { position: absolute; width: 290px; height: 290px; border: 1px solid #b9e7cf16; border-radius: 50%; left: calc(50% - 145px); top: 37px; pointer-events: none; }
+  #root .orbit-a { transform: rotate(-30deg) scaleX(1.34) scaleY(.72); }
+  #root .orbit-b { transform: rotate(34deg) scaleX(1.2) scaleY(.84); border-color: #b1a5e61a; }
+  #root .scene-tag { position: absolute; font-size: 10px; color: #e0eae6; padding: 9px 12px; border: 1px solid #6b807a55; background: #1b2929ee; box-shadow: 0 5px 16px #00000033; border-radius: 11px; z-index: 1; }
+  #root .tag-private { top: 93px; left: 13px; transform: rotate(-5deg); }
+  #root .tag-style { bottom: 91px; right: 12px; transform: rotate(4deg); background: #2d293dee; border-color: #8e82b344; }
+  #root .scene-bottom { position: absolute; inset: auto 20px 15px; display: flex; gap: 12px; justify-content: space-between; align-items: center; }
+  #root .scene-bottom figcaption { font-size: 10px; color: #b4c2c8; }
+  #root .motion-control { min-height: 34px; border: 1px solid #61777455; background: #111922; color: #c5d3da; border-radius: 8px; padding: 5px 9px; font-size: 10px; white-space: nowrap; }
+  #root .style-picker { background: linear-gradient(115deg, #1b2527, #161c26); border-color: #34434a; border-radius: 20px; padding: 22px 25px; margin: 0 0 32px; gap: 24px; box-shadow: inset 0 1px 0 #ffffff05; }
+  #root .style-picker h2 { font-size: 20px; color: #eaf2f1; }
+  #root .style-picker p { color: #a2afbc; font-size: 12px; }
+  #root .style-segments { gap: 8px; }
+  #root .style-segments button { position: relative; background: #111820; color: #bfccd2; border-color: #35424b; border-radius: 13px; min-height: 64px; transition: transform .2s, border-color .2s, background .2s, box-shadow .2s; }
+  #root .style-segments strong { font-size: 12px; }
+  #root .style-segments small { color: #9aabba; font-size: 10px; }
+  #root .style-segments button[aria-pressed=true] { background: #2a3d2b; color: #d9ffba; border-color: #9bcd79; box-shadow: 0 0 0 1px #9bcd791a, 0 0 22px #c4f9950d; }
+  #root .choice-indicator { color: #c4f995; }
+  #root .start-area { scroll-margin-top: 100px; }
+  #root .section-heading h2, #root .analysis-top h2 { font-family: inherit; font-size: 28px; letter-spacing: -.8px; }
+  #root .phase-label, #root .empty-pill { background: #1b2430; border-color: #35414e; color: #b2bfce; border-radius: 8px; }
+  #root .workspace-grid { gap: 24px; }
+  #root .capture-card { position: relative; background: radial-gradient(ellipse at 50% 15%, #c4f99508, transparent 70%), #141c24; border: 1px dashed #657e69; border-radius: 22px; padding: 32px 25px 22px; transition: border-color .2s, background .2s, box-shadow .2s; }
+  #root .capture-card.dragging { border-color: #c4f995; background: #253a2c; box-shadow: inset 0 0 35px #c4f99510; }
+  #root .capture-mark { display: grid; place-items: center; width: 60px; height: 60px; color: #c4f995; font-size: 30px; background: #c4f9950e; border: 1px solid #a7cf7d3b; border-radius: 18px; margin-bottom: 18px; box-shadow: 0 0 30px #c4f99508; }
+  #root .capture-card h3 { font-size: 22px; letter-spacing: -.6px; }
+  #root .capture-card > p { font-size: 13px; color: #a6b4c1; }
+  #root .capture-actions { gap: 11px; flex-wrap: wrap; }
+  #root .capture-limit { font-size: 11px !important; color: #a0b0bc !important; line-height: 1.8; }
+  #root .capture-help { color: #b4c5b8; margin-top: 9px; font-size: 12px; }
+  #root .capture-progress { color: #ccf6b2 !important; }
+  #root .guidance { padding: 24px 26px; border-radius: 22px; background: #171d28; border: 1px solid #2c3443; }
+  #root .guidance h3 { font-size: 22px; }
+  #root .guidance h4 { font-size: 14px; }
+  #root .guidance li > span { background: #2d2c43; color: #c9b9ff; border: 1px solid #8471c033; border-radius: 9px; width: 28px; height: 28px; display: grid; place-items: center; }
+  #root .guidance li p, #root .guidance-note { color: #a5b0c3; font-size: 12px; }
+  #root .guidance-note { border-color: #ffffff0d; }
+  #root .analysis-area { background: #141b25; border-color: #2c3644; border-radius: 16px; }
+  #root .analysis-area > summary, #root .analysis-note { color: #adb8c6; }
+  #root .analysis-status { color: #c1ced8; }
+  #root .analysis-status p[role=alert] { color: #ffd0b8; }
+  #root .workspace-footer { border-color: #35414e; color: #9daebe; }
+  #root .workspace-footer > span { font-size: 11px; }
+  #root .camera-message { background: #26362b; color: #d3e9c7; border-color: #647c55; }
+  #root .photo-view { background: #0c121a; border-color: #37424d; border-radius: 15px; }
+  #root .photo-view figcaption, #root .photo-view label { color: #c2cedb; }
+  #root .privacy-strip { border-color: #2b3441; color: #aebdca; }
+  #root .privacy-strip h2 { color: #d9e7e5; }
+  #root .privacy-strip p { color: #a4b3c0; font-size: 12px; }
+  #root .section-page { padding-top: 36px; animation: studio-enter .45s ease both; }
+  #root .section-page h1, #root .report-heading h1 { font-size: 48px; line-height: 1.1; letter-spacing: -2px; font-weight: 700; }
+  #root .section-intro { color: #abb8c7; font-size: 15px; }
+  #root .preference-chip, #root .reference-count { color: #d0eec1; background: #273729; border-color: #66815d; }
+  #root .refined-export { background: linear-gradient(120deg, #263d30, #202c30 65%, #29283d); border: 1px solid #648061; color: #eefbe8; border-radius: 20px; box-shadow: 0 8px 35px #00000018; }
+  #root .export-main h2 { color: #f0f9ea; font-size: 25px; }
+  #root .export-main p, #root .export-main .eyebrow { color: #bfd0bd; }
+  #root .export-main p strong { color: #e2f7d7; }
+  #root .export-main .button { background: #c4f995; color: #15200e; border-color: #c4f995; }
+  #root .export-options { border-color: #ffffff1a; }
+  #root .export-options > summary { color: #d1e4c7; font-size: 12px; }
+  #root .export-options[open] { background: #151e26; color: #bfcdd7; border: 1px solid #425347; }
+  #root .export-options[open] > summary, #root .export-options .review-confirm { color: #c6dfbf; }
+  #root .result-overview { border-color: #3c4b47; border-radius: 24px; background: #18212b; }
+  #root .result-drawing { background: radial-gradient(ellipse, #324b3933, transparent 70%), #111a22; padding: 24px; }
+  #root .result-pill { color: #b5d7a5; }
+  #root .result-drawing .final-outline svg { height: 260px; }
+  #root .result-drawing .final-outline svg line { stroke: #b6ed9a; }
+  #root .result-drawing .final-outline svg g g line { stroke: #c8acfa; }
+  #root .result-drawing .final-outline svg text { fill: #d2dfe8; }
+  #root .result-drawing figcaption { color: #a8bec3; font-size: 11px; }
+  #root .result-insight { padding: 32px; }
+  #root .result-insight h2 { color: #d5fdb5; font-family: inherit; font-size: 42px; font-weight: 650; }
+  #root .result-insight p, #root .result-insight ul { color: #b3c2d0; font-size: 14px; }
+  #root .result-insight small { color: #a4b3bf; font-size: 11px; }
+  #root .visibility-review { background: #22231f; border-color: #5b5b40; border-radius: 18px; }
+  #root .visibility-review h2 { font-size: 21px; }
+  #root .visibility-review > p, #root .obstruction-options { color: #c8c7ad; font-size: 13px; }
+  #root .visibility-options label, #root .review-confirm { color: #d0d6c9; font-size: 13px; }
+  #root .report-highlights { gap: 16px; }
+  #root .measurement-card { border-color: #36404f; border-radius: 18px; background: linear-gradient(145deg, #1c2530, #161d27); padding: 23px; }
+  #root .measurement-card h3 { color: #b7c6d5; font-size: 14px; }
+  #root .measurement-card p { color: #b5c1cf; font-size: 13px; }
+  #root .measurement-card .measurement-value { color: #e5ffcb; font: 600 38px/1.25 'Segoe UI', Arial, sans-serif; letter-spacing: -1px; }
+  #root .measurement-card .measurement-value span { color: #a7b9c5; font-size: 13px; font-weight: 400; letter-spacing: 0; }
+  #root .measurement-card small { color: #d1c495; font-size: 11px; }
+  #root .report-disclosure { border-color: #313c4b; background: #151d27; border-radius: 14px; }
+  #root .report-disclosure > summary { color: #bdceda; font-size: 14px; }
+  #root .report-disclosure .report-methods { color: #b7c4d2; font-size: 14px; }
+  #root .report-methods > p, #root .report-methods ul, #root .mesh-view > p { color: #b7c4d2; }
+  #root .report-methods details, #root .endpoint-inspection { border-color: #3e4c5a; }
+  #root .structure-panel { background: #111923; border-color: #354452; }
+  #root .structure-outline { background: #f5f7ef; border-radius: 15px; }
+  #root .quality-list li { background: #202d29; border-color: #415447; color: #d4e8cb; }
+  #root .quality-list p, #root .quality-list span { color: #bacab4; }
+  #root .provenance-tag { color: #b6c4d3; font-size: 11px; }
+  #root .table-scroll { border-color: #354452; }
+  #root .table-scroll th { background: #27323d; color: #d5e5ef; }
+  #root .table-scroll td { color: #bfccd8; border-color: #354452; }
+  #root .mesh-panel { background: #f5f7ef; border-radius: 18px; }
+  #root .mesh-controls { background: #1b2730; color: #c6d6df; }
+  #root .report-footnote { border-color: #35414e; }
+  #root .report-footnote > p { color: #a1b2c0; font-size: 12px; }
+  #root .refined-preferences { background: #171f2b; border-color: #374452; border-radius: 22px; }
+  #root .field { color: #bac9d7; font-size: 13px; }
+  #root .field select { color: #e1eaf2; background: #0f1721; border-color: #435262; border-radius: 12px; min-height: 48px; font-size: 15px; }
+  #root .advanced-preferences { border-color: #35414e; }
+  #root .advanced-preferences > summary, #root .gallery-filter-panel > summary { color: #bdc9d5; font-size: 13px; }
+  #root .preference-tags label { color: #cad7e2; background: #1d2a36; border-color: #435262; }
+  #root .catalog-note, #root .page-fineprint { color: #aab9c7; font-size: 13px; }
+  #root .mode-notice { color: #decfa5; background: #2e2d22; border: 1px solid #5a533a; }
+  #root .gallery-filters { color: #c6d5df; background: #18232f; border-color: #3d4b5c; border-radius: 16px; }
+  #root .hair-grid, #root .comparison-grid { gap: 22px; }
+  #root .hair-card { background: #18212c; border-color: #354351; border-radius: 22px; box-shadow: 0 8px 24px #00000014; transition: transform .25s ease, box-shadow .25s ease, border-color .25s; }
+  #root .hair-reference { overflow: hidden; background: #d9d7cd; }
+  #root .hair-reference img { height: 270px; background: #dfddd4; transition: transform .5s cubic-bezier(.2,.7,.3,1); }
+  #root .hair-reference figcaption { color: #b1c4bc; background: #15201f; font-size: 10px; padding: 8px 16px; }
+  #root .hair-card-body { padding: 22px; }
+  #root .hair-card h3 { color: #edf4f6; font-size: 21px; }
+  #root .hair-card p { color: #b1c2d2; font-size: 14px; }
+  #root .hair-card .hair-meta { color: #a3b7c6; font-size: 12px; }
+  #root .hair-card-heading > span { color: #bdcfb8; border-color: #455647; background: #223027; font-size: 10px; }
+  #root .hair-card details { border-color: #344452; font-size: 13px; }
+  #root .hair-card details summary { color: #c2d6bd; }
+  #root .hair-card .image-credit p, #root .image-credit a { color: #b1c2d2; font-size: 12px; }
+  #root .hair-actions .button { min-height: 46px; }
+  #root .hair-card button[aria-pressed=true] { color: #d2f9b4; background: #304329; border-color: #8eae7b; }
+  #root .stylist-brief { background: #25322f; border-color: #9bb78d; color: #d9e4d3 !important; }
+  #root .catalog-footer > p { color: #a1b1bf; font-size: 12px; }
+  #root .recommendation-reasons { color: #becedc; border-color: #35414e; font-size: 13px; }
+  #root .comparison-status { top: 85px; color: #d4edc9; background: #25382c; border-color: #6c8860; border-radius: 13px; }
+  #root .comparison-status a { color: #d4edc9; }
+  #root .comparison-panel { background: #141e29; border-color: #415263; border-radius: 22px; }
+  #root .info-card { background: linear-gradient(135deg, #1b2530, #181e2b); border: 1px solid #364454; border-radius: 22px; padding: 28px; }
+  #root .info-card p, #root .info-card li { color: #b4c3d2; font-size: 14px; }
+  #root .info-card a { color: #cee8bb; font-size: 13px; }
+  #root .privacy-note { background: #1c2b29; color: #c7ded2; border-color: #4d6555; border-radius: 16px; }
+  #root .state-card, #root .empty-report { color: #afbfce; background: #18222c; border: 1px solid #354452; border-radius: 20px; }
+  #root .site-footer { border-color: #2a3643; background: #0a0f16; color: #9eafbd; padding: 26px max(36px, calc((100vw - 1168px)/2)); gap: 22px; flex-wrap: wrap; font-size: 11px; }
+  #root .footer-brand { color: #d4e6de; font-family: inherit; font-size: 24px; font-weight: 650; }
+  #root .site-footer .text-link { color: #b7c8bc; font-size: 11px; }
+  #root .spinner { border-color: #c4f99530; border-top-color: #c4f995; }
+  #root .processing-visual { display: flex; align-items: center; gap: 18px; min-height: 220px; width: 100%; text-align: left; }
+  #root .processing-art { position: relative; isolation: isolate; width: 140px; height: 180px; flex-shrink: 0; overflow: hidden; border: 1px solid #5e7b6544; border-radius: 18px; background: radial-gradient(ellipse at 50% 50%, #8bdc6c1a, transparent 70%), #101923; }
+  #root .processing-art .frame-artwork { position: absolute; inset: 0; }
+  #root .scan-sweep { position: absolute; top: 10%; height: 2px; inset-inline: 10%; background: #d6ffb7; box-shadow: 0 0 16px #9aef70aa; animation: scan-line 2.4s ease-in-out infinite alternate; }
+  #root .scan-sweep::before { content: ''; position: absolute; bottom: 0; height: 35px; inset-inline: 0; background: linear-gradient(transparent, #c4f99518); }
+  #root .processing-copy { flex: 1; min-width: 0; }
+  #root .processing-copy h3 { font-size: 22px; line-height: 1.25; margin-bottom: 10px; }
+  #root .processing-copy > p { font-size: 12px; line-height: 1.7; color: #b5c6d1; }
+  #root .processing-phases { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 6px 13px; font-size: 11px; color: #96a9b8; }
+  #root .processing-phases li { display: flex; align-items: center; gap: 5px; }
+  #root .processing-phases li[aria-current] { color: #d2f8b5; }
+  #root .processing-footnote { font-size: 10px !important; margin-top: 11px; color: #9cacb8 !important; }
+}
+
+@media screen and (hover: hover) and (pointer: fine) {
+  #root .button:not(:disabled):hover { transform: translateY(-2px); background: #d5ffb0; box-shadow: 0 8px 28px #c4f99520; border-color: #d5ffb0; }
+  #root .button.secondary:not(:disabled):hover { background: #29333f; border-color: #718178; box-shadow: 0 7px 20px #00000025; }
+  #root .button:not(:disabled):hover::after { animation: button-shine .65s ease; }
+  #root .style-segments button:hover { transform: translateY(-2px); border-color: #91b17b; }
+  #root .hair-card:hover { transform: translateY(-5px); border-color: #739968; box-shadow: 0 18px 40px #00000038, 0 0 24px #c4f99507; }
+  #root .hair-card:hover img { transform: scale(1.025); }
+  #root .capture-card:hover { border-color: #a5d584; box-shadow: 0 0 30px #c4f99506; }
+  #root .button:not(:disabled):active { transform: translateY(1px) scale(.985); }
+}
+
+@media screen and (max-width: 1080px) {
+  #root .site-header { gap: 14px; padding-inline: 28px; }
+  #root .site-header nav button { padding-inline: 10px; font-size: 12px; }
+  #root .refined-hero { gap: 32px; }
+  #root .hero-spark { right: -33px; font-size: 30px; }
+  #root .scene-tag { font-size: 9px; padding: 8px; }
+  #root .style-picker { grid-template-columns: 1fr 1.3fr; }
+  #root .style-segments button { padding-inline: 10px; gap: 6px; }
+  #root .processing-visual { gap: 12px; }
+  #root .processing-art { width: 100px; height: 150px; }
+}
+
+@media screen and (max-width: 900px) {
+  #root .site-header { min-height: 75px; padding: 13px 24px; }
+  #root .site-header nav { display: none; position: absolute; top: calc(100% + 7px); inset-inline: 16px; width: auto; margin: 0; border-radius: 15px; border-color: #3b4a58; background: #151e29; padding: 10px; flex-direction: column; z-index: 25; box-shadow: 0 20px 45px #00000055; }
+  #root .site-header nav.open { display: flex; }
+  #root .site-header nav button { min-height: 46px; }
+  #root .menu-toggle { min-height: 44px; margin-left: auto; }
+  #root .brand, #root .menu-toggle, #root .header-report { flex-shrink: 0; }
+  #root .journey { gap: 20px; }
+  #root .journey-privacy { display: none; }
+  #root .visual-scene { height: 350px; }
+  #root .refined-hero h1 { letter-spacing: -2.5px; }
+  #root .hero-trust { gap: 10px 16px; font-size: 10px; }
+  #root .scene-bottom { gap: 5px; inset-inline: 12px; }
+  #root .scene-bottom figcaption { font-size: 9px; }
+  #root .report-heading { display: flex; }
+  #root .tag-private { left: 8px; top: 80px; }
+  #root .tag-style { right: 7px; bottom: 78px; }
+}
+
+@media screen and (max-width: 720px) {
+  #root main { padding-inline: 20px; }
+  #root .site-header { gap: 9px; min-height: 74px; padding: 12px 20px; flex-wrap: nowrap; }
+  #root .brand { font-size: 24px; }
+  #root .brand svg { width: 24px; }
+  #root .header-report { padding: 10px 12px; font-size: 11px; }
+  #root .header-wide { display: none; }
+  #root .header-short { display: inline; }
+  #root .menu-toggle { font-size: 11px; padding: 8px 11px; }
+  #root .journey { justify-content: space-between; gap: 8px; padding-block: 12px; }
+  #root .journey button { font-size: 11px; gap: 6px; }
+  #root .journey button > span { width: 23px; height: 23px; font-size: 10px; }
+  #root .refined-hero { grid-template-columns: 1fr; gap: 26px; padding: 29px 0 28px; }
+  #root .refined-hero h1 { font-size: 57px; letter-spacing: -3px; margin: 17px 0; }
+  #root .hero-spark { right: 0; top: 2px; font-size: 32px; }
+  #root .hero-description { font-size: 15px; margin-top: 16px; }
+  #root .hero-actions { gap: 9px; margin-top: 21px; }
+  #root .hero-actions .button { flex: 1; font-size: 13px; gap: 12px; padding-inline: 14px; }
+  #root .hero-trust { margin-top: 18px; font-size: 10px; gap: 13px; }
+  #root .visual-scene { height: 235px; border-radius: 23px; }
+  #root .scene-topline { inset: 15px 16px auto; font-size: 8px; }
+  #root .scene-face { width: 190px; height: 210px; left: calc(50% - 95px); top: 10px; }
+  #root .scene-orbit { width: 200px; height: 200px; left: calc(50% - 100px); top: 10px; }
+  #root .scene-tag { font-size: 9px; padding: 7px 8px; }
+  #root .tag-private { top: 73px; }
+  #root .tag-style { bottom: 70px; }
+  #root .scene-bottom { inset: auto 13px 8px; }
+  #root .scene-bottom figcaption { font-size: 9px; }
+  #root .scene-bottom .motion-control { font-size: 9px; padding-inline: 7px; }
+  #root .style-picker { grid-template-columns: 1fr; gap: 17px; border-radius: 18px; padding: 20px; margin-bottom: 26px; }
+  #root .style-picker h2 { font-size: 21px; }
+  #root .style-picker p { font-size: 12px; line-height: 1.65; }
+  #root .style-segments button { justify-content: center; gap: 6px; min-height: 58px; padding: 10px 6px; border-radius: 11px; }
+  #root .style-segments strong { font-size: 11px; }
+  #root .style-segments small { display: none; }
+  #root .section-heading { align-items: flex-start; gap: 14px; }
+  #root .section-heading h2, #root .analysis-top h2 { font-size: 25px; }
+  #root .section-heading .phase-label { font-size: 9px; white-space: normal; flex-shrink: 0; max-width: 100px; }
+  #root .workspace-grid { grid-template-columns: 1fr; gap: 18px; }
+  #root .capture-card { padding: 27px 19px 18px; }
+  #root .capture-card h3 { font-size: 21px; }
+  #root .capture-card > p { font-size: 13px; }
+  #root .capture-actions { gap: 9px; width: 100%; }
+  #root .capture-actions .button { flex: 1; font-size: 13px; padding-inline: 12px; }
+  #root .guidance { padding: 23px; }
+  #root .guidance h4 { font-size: 14px; }
+  #root .guidance li p, #root .guidance-note { font-size: 13px; }
+  #root .section-page h1, #root .report-heading h1 { font-size: 38px; letter-spacing: -1.7px; }
+  #root .report-heading { flex-direction: column; align-items: flex-start; gap: 10px; }
+  #root .report-heading .button { margin: 0 0 12px; }
+  #root .section-intro { font-size: 14px; }
+  #root .export-main h2 { font-size: 24px; }
+  #root .export-main .button { width: 100%; }
+  #root .result-overview { grid-template-columns: 1fr; border-radius: 20px; }
+  #root .result-drawing .final-outline svg { height: 230px; }
+  #root .result-insight { padding: 25px; }
+  #root .result-insight h2 { font-size: 36px; }
+  #root .result-insight p, #root .result-insight ul { font-size: 14px; }
+  #root .report-highlights { grid-template-columns: 1fr; }
+  #root .visibility-review { padding: 22px 20px; }
+  #root .visibility-review > p { font-size: 13px; }
+  #root .report-disclosure > summary { font-size: 13px; line-height: 1.7; }
+  #root .hair-grid, #root .comparison-grid { grid-template-columns: 1fr; }
+  #root .hair-reference img { height: 300px; }
+  #root .hair-card h3 { font-size: 23px; }
+  #root .hair-card p { font-size: 14px; }
+  #root .field select { font-size: 16px; }
+  #root .refined-preferences { padding: 20px; }
+  #root .comparison-status { top: 76px; }
+  #root .catalog-footer { gap: 10px; }
+  #root .info-card { padding: 24px; }
+  #root .info-card p { font-size: 14px; }
+  #root .site-footer { padding: 23px 20px; gap: 13px 20px; }
+  #root .processing-visual { min-height: 210px; gap: 14px; }
+  #root .processing-art { width: 95px; height: 150px; }
+  #root .processing-copy h3 { font-size: 20px; }
+  #root .processing-copy > p { font-size: 12px; }
+  #root .processing-phases { gap: 5px; flex-direction: column; }
+}
+
+@media screen and (max-width: 360px) {
+  #root main { padding-inline: 16px; }
+  #root .site-header { padding-inline: 15px; gap: 8px; }
+  #root .brand { font-size: 21px; gap: 5px; }
+  #root .brand svg { width: 21px; }
+  #root .menu-toggle { padding: 8px; }
+  #root .header-report { font-size: 10px; padding-inline: 9px; }
+  #root .refined-hero h1 { font-size: 49px; }
+  #root .hero-spark { right: 0; font-size: 28px; }
+  #root .hero-trust { font-size: 9px; gap: 10px; }
+  #root .journey button { font-size: 10px; }
+  #root .style-picker { padding: 18px 14px; }
+  #root .style-segments { gap: 6px; }
+  #root .style-segments strong { font-size: 10px; }
+  #root .processing-art { width: 72px; height: 130px; --scan-travel: 100px; }
+  #root .processing-visual { gap: 10px; }
+  #root .processing-copy h3 { font-size: 18px; }
+  #root .scene-tag { font-size: 8px; }
+}
+
+@media screen and (pointer: coarse), screen and (max-width: 900px) {
+  #root .button, #root .text-link, #root summary, #root .journey button, #root .motion-control { min-height: 44px; }
+}
+
+@keyframes aura-drift { from { transform: translate(0, 0) scale(1); } to { transform: translate(-90px, 80px) scale(1.5); } }
+@keyframes face-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-7px) rotate(1deg); } }
+@keyframes scan-line { from { transform: translateY(0); } to { transform: translateY(var(--scan-travel, 130px)); } }
+@keyframes button-shine { from { left: -60%; } to { left: 160%; } }
+@keyframes studio-enter { from { opacity: .25; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Pause controls affect artwork/processing decoration, never the actual job. */
+@media screen {
+  #root .app-shell[data-motion=paused] *,
+  #root .app-shell[data-motion=paused] *::before,
+  #root .app-shell[data-motion=paused] *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #root *, #root *::before, #root *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  #root .motion-control { display: none; }
+}

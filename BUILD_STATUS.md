@@ -1,6 +1,34 @@
 # FaceFrame build status
 
-## Current delivery: clearer interface and report — 1.2.0 (2026-10-19)
+## Current delivery: visual studio and live processing states — 1.3.0 (2026-10-20)
+
+The user requested a more expressive, contemporary visual treatment and processing animation within the existing project. This extends the same React application; there is no replacement app or Python/photo-processing backend.
+
+### Changes
+
+- Added `src/studio.css` as a screen-only visual layer: charcoal surfaces, mint/lavender accents, modern sans-serif display type, stronger buttons with short hover sheen, layered cards, gentle ambient motion and reference-card hover feedback. No animation library, remote font/script or GPU shader was added. The analyzer, worker, image preparation, quality rules, geometry, shape rules, shared contracts, recommendations, reference assets and report renderer are unchanged.
+- Added original SVG artwork labelled “Illustration only · not an analysis.” Its paths are decorative, never described as actual detected landmarks. The hero has clear capture/style actions. Real result outlines still come exclusively from the current frame.
+- Added a scan illustration during the actual preparing/loading/analyzing stages. Phase labels follow existing application state; no timers simulate completion, no percentages are invented and no minimum animation wait slows the detector. Failure/reset/unmount removes this decoration. Existing upload/camera controls and worker cancellation remain functional.
+- Pause effects in the hero and Pause visual effects in the footer disable decorative animation/transitions. System reduced motion disables them automatically. Actual inference continues. Choice is kept only in React memory. Smaller header labels retain full accessible names; small-screen navigation opens as an anchored overlay. Fixed a menu-open layout issue found at 320 pixels that squeezed the header actions.
+- Revisited 21st.dev’s shimmer collection and visually inspected the loaded Magic UI shimmer-button preview. Primary-text Aurora references informed ambient lighting. DESIGN_REVIEW.md links the exact sources and distinguishes live visual review from text-only review. Implementation is original CSS/SVG, with no copied component source or new license claim.
+
+### Verification actually performed
+
+- Baseline and final **37/37 existing tests** passed; assertions were not changed. Strict TypeScript and production build passed. Seven pinned model/runtime assets, 24 original PNG/rights records and all 24 preview derivatives verified. Existing detector worker output hash remained unchanged. No new unit test is claimed for cosmetic CSS; UI behavior was checked in the browser.
+- Production preview in Windows embedded Chromium performed actual inference on the permission-cleared NASA crop: one face, 478 landmarks, automatic Results navigation and worker termination. A temporary QA observer recorded real preparing → loading → analyzing phases without collecting landmark coordinates. The resulting actual report and visibility review still worked. All observers/overrides were removed afterward.
+- Pausing effects produced zero running decorative animations; resume restored them. Emulating `prefers-reduced-motion: reduce` likewise produced zero running animations while keeping artwork visible. This is a browser preference test, not a physical accessibility-device certification.
+- Temporarily throttled model downloads through DevTools to inspect the actual loading animation, then reset while initialization was pending. Processing artwork and photo canvases disappeared, the observed worker was terminated and no delayed report appeared. Throttling/cache overrides were restored; no artificial delay is present in application code. A corrupt JPEG still showed “Truncated JPEG image.” with focus on `analysis-title` and no processing artwork.
+- Exercised 320/390-pixel portrait and 844-pixel landscape layouts across capture, Results, references/navigation and Care. No document overflow in checked states. After the menu fix, the open 320-pixel header remained 74 pixels high, its overlay was 288 pixels wide and actions retained usable widths. Checked focus moved to main after section navigation. These are desktop viewport checks, not physical-phone tests.
+- Men’s mode showed only Textured crop, Classic side part, Quiff, Wavy taper and Curly taper. Explicit mixed browsing loaded and decoded all 24 correct 768-pixel previews. Returning to Men’s restored five cards. Original rights records and editorial grouping are unchanged.
+- Report preview retained a white page and readable dark text, three selected men’s references and zero photo canvases by default. New A4 and Letter print-engine PDFs were each four pages; all eight rendered pages were visually inspected. Summary/measurements, references, outline/care/methods and complete credits remained present without observed clipping. Text remained selectable. PNG privacy regressions passed in the unchanged export tests; off/on/off browser downloads from 1.2.0 are historical checks, not newly repeated here.
+- Source review introduced no logging/storage/transmission of photos or results. Exercised runtime had zero external resource entries and empty local/session storage. Observed page network events during actual upload contained eight GET requests and zero request bodies/non-GET requests; this event set is page-scoped, not a new comprehensive worker-network audit. Existing same-origin worker/static-download architecture remains unchanged.
+- Production CSS increased from 11.84 to about 17.35 kB gzip and entry JavaScript from 97.08 to about 98.73 kB gzip. Decorative motion uses CSS/SVG with no JavaScript animation loop. Model resolution/accuracy and image assets were not reduced for these effects.
+
+### Limits
+
+Windows embedded Chromium is the only browser actually exercised in this visual pass. No new standalone Chrome, Firefox, Safari, physical Android/iOS, camera hardware, native print dialog or live-host verification is claimed. Existing five-reference men’s texture/length coverage gaps remain. The source update and local preview are not a public deployment. README.md retains setup and HTTPS static-host instructions. Screenshots and QA PDFs are outside the tracked app; no visitor image, report or derived face data was committed.
+
+## Historical delivery: clearer interface and report — 1.2.0 (2026-10-19)
 
 User requested a less crowded, more polished interface with obvious report access, keeping the existing application. Reviewed eight analyzer sites (six live visual reviews and two primary-text-only reviews), plus 21st.dev. DESIGN_REVIEW.md records the links, actual coverage and adopted patterns. No third-party portraits, templates, component code, remote scripts or new dependencies were copied into the app.
 

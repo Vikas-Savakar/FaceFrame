@@ -1,4 +1,4 @@
-# FaceFrame — clearer interface and report (1.2.0)
+# FaceFrame — visual studio and live processing states (1.3.0)
 
 A React/Vite/TypeScript website with real browser-local still-image landmark detection, traceable apparent proportions, provisional shape descriptions, an annotated contour and an optional estimated mesh. The existing design and contracts are retained. There are 24 locally bundled generated hairstyle references, practical preferences, session favourites/comparison and sourced general care. Phase 5 adds local print/PDF and annotated PNG exports, photo exclusion by default, full-session reset and deployment preparation. No live deployment is claimed.
 
@@ -137,8 +137,14 @@ A fresh visit or reset now starts with no reference group selected. Uploading a 
 
 The gallery labels its active mode. Pressing a group button always exits mixed browsing, resets gallery filters and clears comparison cards, including when that group was already selected. Reset preferences requires a new choice. Choices remain in browser memory only; a reload clears them. A report cannot automatically insert favourites before a group is chosen. Existing geometry, detection and photo-free export behavior remain unchanged. In an already-open Chrome tab, use Ctrl+Shift+R to load the updated build, then upload again and choose your group.
 
-## Current interface refinement (1.2.0)
+## Interface refinement (1.2.0)
 
-The existing application now uses a three-step photo/results/styles journey, a compact capture screen, explicit reference choice before upload, clearer measurement highlights and prominent report access. Secondary preferences, filters, formulas and mesh controls remain available under labelled disclosures. Men’s styling coverage is still five short-cut references; the other catalog assets and all rights records are preserved. See DESIGN_REVIEW.md for the eight analyzer references and 21st.dev reviewed before implementation.
+The existing application uses a three-step photo/results/styles journey, a compact capture screen, explicit reference choice before upload, clearer measurement highlights and prominent report access. Secondary preferences, filters, formulas and mesh controls remain available under labelled disclosures. Men’s styling coverage is still five short-cut references; the other catalog assets and all rights records are preserved. See DESIGN_REVIEW.md for the eight analyzer references and 21st.dev reviewed before implementation.
 
 Screen CSS is isolated in `src/interface.css`; print styling remains independent. No new runtime dependencies, detector changes, quality-threshold changes or shape-rule changes were introduced. Report format 5.2.0 removes repeated reference metadata from the reading path and retains full credits separately. This is a modification of the same React codebase. No replacement app or live deployment is claimed.
+
+## Visual studio update (1.3.0)
+
+The user-requested visual layer in `src/studio.css` adds charcoal surfaces, mint/lavender accents, sans-serif display type, stronger buttons, bounded hover effects and a gently floating original SVG illustration. The illustration is explicitly decorative; it is neither a detected face nor a sample report. `VisualEffects.tsx` also renders an indeterminate scan illustration only while the real pipeline is preparing, loading or analyzing. Its phase label follows application state. There are no invented percentages, simulated completions or minimum-duration delays.
+
+Pause effects in the illustration, or Pause visual effects in the footer, disables decorative animations and transitions for the visit. The system’s `prefers-reduced-motion` setting automatically disables them. Neither option pauses inference. Effects use CSS/SVG; no Python server, animation library, remote script, WebGL shader or additional runtime package is required. The existing print preview remains light, with original-photo inclusion off by default. The studio styles are screen-only and scoped away from report printing.

@@ -5,6 +5,7 @@ import { prepareImage } from '../modules/imagePreparation';
 import { LocalFaceDetector } from '../modules/faceAnalysis';
 import type { DetectionOutput } from '../modules/detectionTypes';
 import { PhotoView } from './PhotoView';
+import {ProcessingVisual} from './VisualEffects';
 type Stage = 'empty' | 'preparing' | 'loading' | 'ready' | 'analyzing' | 'done' | 'error';
 export default function CaptureWorkspace({ onReport, initialPhoto, initialOutput, onResult, onInvalidate }: { onReport: () => void; initialPhoto?: PhotoAsset; initialOutput?: DetectionOutput; onResult: (photo: PhotoAsset, output: DetectionOutput) => void; onInvalidate: () => void }) {
   const [photo, setPhoto] = useState<PhotoAsset | undefined>(initialPhoto);
@@ -123,7 +124,7 @@ export default function CaptureWorkspace({ onReport, initialPhoto, initialOutput
   return <>
     <section className="start-area" id="workspace" aria-labelledby="workspace-title"><div className="section-heading"><div><p className="eyebrow">ADD YOUR PHOTO</p><h2 id="workspace-title">One photo. A fresh perspective.</h2></div><span className="phase-label">JPG, PNG or WebP</span></div>
     <div className="workspace-grid"><div className={`capture-card ${dragging ? 'dragging' : ''}`} onDragOver={event => { event.preventDefault(); setDragging(true); }} onDragLeave={event => { if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) setDragging(false); }} onDrop={event => { event.preventDefault(); setDragging(false); const files = event.dataTransfer.files; if (files.length !== 1) { clearPhoto(); setError('Drop exactly one image at a time.'); setStage('error'); } else void accept(files[0], 'upload'); }}>
-      <span className="capture-mark" aria-hidden="true">↑</span><h3>Drop your photo here</h3><p>One face, looking straight ahead.<br/>Choose a photo or take a camera still.</p>
+      {busy?<ProcessingVisual stage={stage==='preparing'?'preparing':stage==='loading'?'loading':'analyzing'}/>:<><span className="capture-mark" aria-hidden="true">↥</span><h3>Drop your photo. Find your frame.</h3><p>One face, looking straight ahead.<br/>Choose a photo or take a camera still.</p></>}
       <input ref={file} className="visually-hidden" type="file" aria-label="Choose JPEG, PNG or WebP photo" accept="image/jpeg,image/png,image/webp" onChange={event => { const selected = event.target.files?.[0]; event.target.value = ''; if (selected) void accept(selected, 'upload'); }}/>
       <div className="capture-actions"><button className="button" onClick={() => file.current?.click()}>Upload a photo</button><button className="button secondary" onClick={() => void startCamera()} disabled={cameraOpen}>Start camera</button></div>
       <p className="capture-progress" role="status">{busy?titles[stage]:''}</p><p className="capture-limit">JPEG, PNG, WebP · Up to 12 MiB / 24 MP / 12,000 px per side</p><details className="capture-help"><summary>Photo limits & camera help</summary><p className="capture-limit">Still images only · Prepared to a maximum 1280 px edge. Camera requires HTTPS or localhost. If this preview restricts it, open the site directly or upload instead.</p></details>

@@ -16,7 +16,7 @@ This is an interface review, not an accuracy or privacy audit of competitors. No
 
 Eight analyzer references were reviewed: six visually, two via primary text, plus 21st.dev. Their public claims are not validation of model accuracy. No reference-site portraits, brand assets, copy or supposed confidence scores were added.
 
-## Final direction
+## 1.2.0 direction (2026-10-19)
 
 - Keep the forest-green identity, with lighter surfaces, deliberate spacing and clearer typography.
 - Put the explicit men’s/women’s/all reference choice beside photo capture. Photo pixels never choose gender. An unset preference produces no mixed suggestions.
@@ -26,3 +26,11 @@ Eight analyzer references were reviewed: six visually, two via primary text, plu
 - Collapse detailed methods, extra measurements and mesh tools while preserving inspection, sources and limitations.
 - Show reference cards promptly. Keep core hair preferences visible, with secondary filters/rationale disclosed on demand. Preserve credits and explicit mixed browsing.
 - Keep screen styling separate from printing, and inspect actual A4/Letter output. Preserve the working modules and contracts.
+
+## 1.3.0 visual/motion follow-up (2026-10-20)
+
+The user requested a stronger visual change and more motion after reviewing 1.2.0. Revisited the [21st.dev shimmer collection](https://21st.dev/community/components/explore/shimmer-button), then visually inspected the loaded [Dillion Verma / Magic UI Shimmer Button](https://21st.dev/@dillionverma/components/shimmer-button), including its running preview. Also read 21st.dev’s [Aurora collection](https://21st.dev/community/components/explore/aurora-shader) and [soft Aurora example](https://21st.dev/@kevingirelli/components/aurora) descriptions as primary references. Those latter pages are text references, not claimed live-preview tests.
+
+Adopted ideas: dark layered surfaces, luminous accents, a brief button sheen on hover, soft ambient lighting and responsive card feedback. Implemented original CSS/SVG adapted to the existing app rather than copying component source or introducing Tailwind/Motion/Three dependencies. No third-party image or component code was bundled, so no new third-party asset license is claimed. The existing 24 reference-image records remain unchanged.
+
+The new artwork is labelled illustration only. The scan animation follows actual preparation/loading/detection stages; it is indeterminate, adds no artificial wait and never substitutes for results. Pause controls and system reduced motion stop decoration. Effects are scoped to screen UI; the light printable report and actual calculation methods remain unchanged. Small-screen navigation is an anchored overlay, keeping the compact report action usable.
